@@ -38,4 +38,12 @@ public class Bullet_P : MonoBehaviour
     {
         CancelInvoke();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Boss1")
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

@@ -6,6 +6,7 @@ public class MovementBoss : MonoBehaviour
 {
     private float moveSpeed;
     private bool moveRight;
+    private int Health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +33,19 @@ public class MovementBoss : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
         }
+
+        if (Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Kena");
+        if (collision.tag == "BulletPlayer")
+        {
+            Health--;
+            Debug.Log("Health : "+ Health);
+        }
     }
 }

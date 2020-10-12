@@ -30,8 +30,8 @@ public class BulletPool_P : MonoBehaviour
 
     public GameObject GetBullet()
     {
-        if (bullets.Count > 0)
-        {
+        /*if (bullets.Count > 0)
+        {*/
             for (int i = 0; i < bullets.Count; i++)
             {
                 if (!bullets[i].activeInHierarchy)
@@ -39,7 +39,7 @@ public class BulletPool_P : MonoBehaviour
                     return bullets[i];
                 }
             }
-        }
+        //}
 
         if (notEnoughtBulletsInPool)
         {
@@ -51,4 +51,5 @@ public class BulletPool_P : MonoBehaviour
 
         return null;
     }
+
 }
