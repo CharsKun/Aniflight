@@ -45,7 +45,7 @@ public class MovementBoss : MonoBehaviour
         if (collision.tag == "BulletPlayer")
         {
             Health--;
-            Debug.Log("Health : "+ Health);
+            //Debug.Log("Health : "+ Health);
         }
     }
 }

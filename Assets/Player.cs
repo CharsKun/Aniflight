@@ -33,10 +33,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         InputProses();
-        if(transform.position.y == 0)
-        {
-            Debug.Log("Trigger");
-        }
+
     }
 
     void FixedUpdate()
