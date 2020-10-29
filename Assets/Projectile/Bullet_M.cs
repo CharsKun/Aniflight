@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet_P : MonoBehaviour
+public class Bullet_M : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
 
     private void OnEnable()
     {
-        Invoke("Destroy", 1.7f);
+        Invoke("Destroy", 4f);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 9f;
+        moveSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -37,13 +37,5 @@ public class Bullet_P : MonoBehaviour
     private void OnDisable()
     {
         CancelInvoke();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Boss1" || collision.tag == "Minion")
-        {
-            gameObject.SetActive(false);
-        }
     }
 }

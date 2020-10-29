@@ -7,6 +7,7 @@ public class MovementBoss : MonoBehaviour
     private float moveSpeed;
     private bool moveRight;
     private int Health = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class MovementBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(transform.position.x > 3f)
         {
             moveRight = false;
@@ -38,6 +40,7 @@ public class MovementBoss : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
