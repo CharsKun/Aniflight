@@ -9,6 +9,8 @@ TagManager:
   - PowerUp
   - Collider
   - Minion
+  - EnemyBullet
+  - BossBullet
   layers:
   - Default
   - TransparentFX

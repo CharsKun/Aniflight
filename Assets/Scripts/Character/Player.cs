@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     private Vector2 moveD;
 
     public GameObject BulletP;
+    public int maxHealth = 5;
+    public int currentHealth;
+    public HealthBar healthBar;
 
     public Sprite backForm;
     public Sprite Form;
@@ -34,7 +37,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthBar.Setmaxhealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -47,6 +51,11 @@ public class Player : MonoBehaviour
         if (currentTime <= 0f)
         {
             currentTime = 0f;
+        }
+
+        if(currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -83,4 +92,13 @@ public class Player : MonoBehaviour
         print(currentTime);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "BossBullet")
+        {
+            currentHealth--;
+            healthBar.setHealth(currentHealth);
+            Debug.Log("Health : "+ currentHealth);
+        }
+    }
 }

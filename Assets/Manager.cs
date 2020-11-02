@@ -16,6 +16,7 @@ public class Manager : MonoBehaviour
         boss = Instantiate(Boss1);
         boss.transform.position = new Vector2(-0.02423012f, -1.798349f);
         boss.SetActive(false);
+
         count = 0;
         StartCoroutine(startWave());
     }

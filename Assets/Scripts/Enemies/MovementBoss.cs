@@ -9,6 +9,7 @@ public class MovementBoss : MonoBehaviour
 
     public int maxHealth = 200;
     public int Health;
+    public HealthBar_Boss healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class MovementBoss : MonoBehaviour
         moveSpeed = 2f;
         moveRight = true;
         Health = maxHealth;
+        healthBar.Setmaxhealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class MovementBoss : MonoBehaviour
         if (collision.tag == "BulletPlayer")
         {
             Health--;
+            healthBar.setHealth(Health);
             //Debug.Log("Health : "+ Health);
         }
     }
