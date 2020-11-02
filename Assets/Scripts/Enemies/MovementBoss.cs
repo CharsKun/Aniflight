@@ -6,13 +6,16 @@ public class MovementBoss : MonoBehaviour
 {
     private float moveSpeed;
     private bool moveRight;
-    private int Health = 100;
+
+    public int maxHealth = 200;
+    public int Health;
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = 2f;
         moveRight = true;
+        Health = maxHealth;
     }
 
     // Update is called once per frame

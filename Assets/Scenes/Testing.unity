@@ -230,8 +230,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76942998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -13.1, z: 0}
-  m_LocalScale: {x: 1.967, y: 1.967, z: 1.967}
+  m_LocalPosition: {x: 0.18, y: -14.27, z: 0}
+  m_LocalScale: {x: 1.2865268, y: 1.2865268, z: 1.2865268}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -5586,7 +5586,7 @@ MonoBehaviour:
   Boss1: {fileID: 1722170895923769805, guid: ffaebfcb73f5af94fab0980f1de524ad, type: 3}
   count: 0
   maxCount: 5
-  minionPrefab: {fileID: 4079704366788068840, guid: 92eed9a315dfc564ba722caf152fa0df,
+  minionPrefab: {fileID: 4079704366788068840, guid: 807bd0b3fb1a0144ba82c6cbe75625d0,
     type: 3}
   respawnTime: 1
 --- !u!1 &7295615675337773641

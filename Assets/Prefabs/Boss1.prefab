@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d986d398bbc12624d8ce633db0af98a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 200
+  Health: 200
 --- !u!114 &1722170895923769841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsAmount: 6
   startAngle: 90
+  Boss: {fileID: 1722170895923769805}
 --- !u!60 &1722170895923769846
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -129,7 +132,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
