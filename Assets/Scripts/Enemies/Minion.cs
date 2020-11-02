@@ -22,7 +22,6 @@ public class Minion : MonoBehaviour
         if(transform.position.y < -15.5f || Health <= 0)
         {
             if(Health <= 0) ManagerGame.GetComponent<Manager>().count++;
-            Debug.Log(ManagerGame.GetComponent<Manager>().count);
             Destroy(this.gameObject);
         }
     }

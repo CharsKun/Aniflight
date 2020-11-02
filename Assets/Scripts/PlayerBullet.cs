@@ -10,6 +10,7 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField]
     private float startAngle = 90f;
     private float endAngle = 270f;
+    public float fireSpeed;
 
     private int Power = 1;
 
@@ -75,4 +76,6 @@ public class PlayerBullet : MonoBehaviour
             Debug.Log("Hit");
         }
     }
+
+
 }

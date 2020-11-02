@@ -8,6 +8,14 @@ public class Player : MonoBehaviour
     public float speed;
     private Vector2 moveD;
 
+    public GameObject BulletP;
+
+    public Sprite backForm;
+    public Sprite Form;
+
+    public float currentTime = 0f;
+    public float startTime = 5f;
+
     void InputProses()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -33,7 +41,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         InputProses();
+        changeForm();
+        currentTime -= 1 * Time.deltaTime;
 
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+        }
     }
 
     void FixedUpdate()
@@ -42,7 +56,31 @@ public class Player : MonoBehaviour
         {
             Move();
         }
+
+
     }
 
-   
+    private void changeForm()
+    {
+        Debug.Log("Form Actived");
+        if (Input.GetButtonDown("Form"))
+        {
+            currentTime = startTime;
+        }
+
+        BulletP.GetComponent<Bullet_P>().currentTime = currentTime;
+
+        if (currentTime > 0f)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
+            GetComponent<PlayerBullet>().fireSpeed = 0.1f;
+        }
+        else if(currentTime <= 0f)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
+            GetComponent<PlayerBullet>().fireSpeed = 0.2f;
+        }
+        print(currentTime);
+    }
+
 }
