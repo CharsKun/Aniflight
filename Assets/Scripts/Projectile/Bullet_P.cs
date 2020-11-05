@@ -9,9 +9,6 @@ public class Bullet_P : MonoBehaviour
 
     //public bool validation;
 
-    public Sprite Form;
-    public Sprite backForm;
-
     public float currentTime;
     private void OnEnable()
     {
@@ -29,7 +26,6 @@ public class Bullet_P : MonoBehaviour
     void Update()
     {
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-        changeForm();
     }
 
     public void SetMoveDirection(Vector2 dir)
@@ -52,18 +48,6 @@ public class Bullet_P : MonoBehaviour
         if (collision.tag == "Boss1" || collision.tag == "Minion")
         {
             gameObject.SetActive(false);
-        }
-    }
-
-    private void changeForm()
-    {
-        if (currentTime > 0f)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
-        }
-        else if (currentTime <= 0f)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
         }
     }
 }

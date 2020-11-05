@@ -12,7 +12,9 @@ public class Player : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
     public HealthBar healthBar;
+    public Player player;
 
+    private bool isRage = true;
     public Sprite backForm;
     public Sprite Form;
 
@@ -82,12 +84,20 @@ public class Player : MonoBehaviour
         if (currentTime > 0f)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
-            GetComponent<PlayerBullet>().fireSpeed = 0.1f;
+            if(isRage == false)
+            {
+                this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
+                isRage = true;
+            }
         }
         else if(currentTime <= 0f)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
-            GetComponent<PlayerBullet>().fireSpeed = 0.2f;
+            if(isRage == true)
+            {
+                this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                isRage = false;
+            }
         }
         print(currentTime);
     }
