@@ -13,10 +13,19 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     public Player player;
+    public int maxMana = 100;
+    public int currentMana;
 
-    private bool isRage = true;
-    public Sprite backForm;
-    public Sprite Form;
+    private bool formTimeOut = false;
+    private Animator anim;
+
+    private int state;
+    /*
+    STATE
+    1 normal
+    2 burst form
+    3 burst ultimate
+    */
 
     public float currentTime = 0f;
     public float startTime = 5f;
@@ -31,9 +40,9 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-   
+
         rb.velocity = new Vector2(moveD.x * speed, moveD.y * speed);
-        
+
     }
 
     // Start is called before the first frame update
@@ -41,13 +50,35 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
+        state = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
         InputProses();
-        changeForm();
+        if (state == 1)
+        {
+            if (Input.GetButtonDown("Form") && currentMana >= 100)
+            {
+                state = 2;
+                anim.SetBool("Burst",true);
+            }
+        } else if (state == 2)
+        {
+            if (Input.GetButtonDown("Form") || formTimeOut == true)
+            {
+                state = 3;
+                //anim.SetBool("Burst", true);
+            }
+        } else if (state == 3)
+        {
+            ultimate();
+            state = 1;
+            anim.SetBool("Burst", false);
+        }
+        BulletP.GetComponent<Bullet_P>().currentTime = currentTime;
+        //changeForm();
         currentTime -= 1 * Time.deltaTime;
 
         if (currentTime <= 0f)
@@ -55,7 +86,7 @@ public class Player : MonoBehaviour
             currentTime = 0f;
         }
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
         }
@@ -63,7 +94,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(transform.position.y != 0f)
+        if (transform.position.y != 0f)
         {
             Move();
         }
@@ -71,7 +102,7 @@ public class Player : MonoBehaviour
 
     }
 
-    private void changeForm()
+    /*private void changeForm()
     {
         Debug.Log("Form Actived");
         if (Input.GetButtonDown("Form"))
@@ -100,7 +131,7 @@ public class Player : MonoBehaviour
             }
         }
         print(currentTime);
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -108,7 +139,14 @@ public class Player : MonoBehaviour
         {
             currentHealth--;
             healthBar.setHealth(currentHealth);
-            Debug.Log("Health : "+ currentHealth);
+            Debug.Log("Health : " + currentHealth);
         }
     }
+
+    private void ultimate()
+    {
+        moveD = new Vector2(0,-11);
+    }
+
+
 }
