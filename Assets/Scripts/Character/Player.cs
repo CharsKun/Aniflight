@@ -11,10 +11,9 @@ public class Player : MonoBehaviour
     public GameObject BulletP;
     public int maxHealth = 5;
     public int currentHealth;
-    public int maxMana = 100;
-    public int currentMana;
+    public float currentMana;
     public HealthBar healthBar;
-    public Player player;
+    public ManaBar manaBar;
 
     private bool isRage = true;
     public Sprite backForm;
@@ -66,6 +65,13 @@ public class Player : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if(currentMana <=20)
+        {
+            currentMana += 1 * Time.deltaTime;
+
+            manaBar.setMana(currentMana);
+        }
     }
 
     void FixedUpdate()
@@ -81,10 +87,11 @@ public class Player : MonoBehaviour
     private void changeForm()
     {
         
-        if (Input.GetButtonDown("Form")&&isRage==false&&currentMana==100)
+        if (Input.GetButtonDown("Form")&&isRage==false && currentMana>=20)
         {
             Debug.Log("Form Actived");
             currentTime = startTime;
+            currentMana = 0;
         }
 
         BulletP.GetComponent<Bullet_P>().currentTime = currentTime;
@@ -128,6 +135,7 @@ public class Player : MonoBehaviour
             
             currentUltiTime = 2f;
         }
+
         if (currentUltiTime > 0f)
         {
             anim.SetBool("isUlti", true);

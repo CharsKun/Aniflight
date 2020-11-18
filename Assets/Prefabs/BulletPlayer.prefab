@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bb8224034015f42a279d255828dc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257, type: 3}
   currentTime: 0
 --- !u!60 &7557857445033923632
 PolygonCollider2D:

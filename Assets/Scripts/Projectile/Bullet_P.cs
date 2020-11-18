@@ -6,6 +6,7 @@ public class Bullet_P : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
+    public GameObject Player;
 
     //public bool validation;
 
@@ -47,6 +48,7 @@ public class Bullet_P : MonoBehaviour
     {
         if (collision.tag == "Boss1" || collision.tag == "Minion")
         {
+            //Player.GetComponent<Player>().currentMana++;
             gameObject.SetActive(false);
         }
     }
