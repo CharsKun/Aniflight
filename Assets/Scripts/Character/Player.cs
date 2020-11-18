@@ -11,15 +11,20 @@ public class Player : MonoBehaviour
     public GameObject BulletP;
     public int maxHealth = 5;
     public int currentHealth;
+    public int maxMana = 100;
+    public int currentMana;
     public HealthBar healthBar;
     public Player player;
 
     private bool isRage = true;
     public Sprite backForm;
     public Sprite Form;
+    Animator anim;
 
     public float currentTime = 0f;
     public float startTime = 5f;
+    public float currentUltiTime = 0f;
+    public float UltiTime = 1f;
 
     void InputProses()
     {
@@ -41,6 +46,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,6 +55,7 @@ public class Player : MonoBehaviour
         InputProses();
         changeForm();
         currentTime -= 1 * Time.deltaTime;
+        currentUltiTime -= 1 * Time.deltaTime;
 
         if (currentTime <= 0f)
         {
@@ -73,9 +80,10 @@ public class Player : MonoBehaviour
 
     private void changeForm()
     {
-        Debug.Log("Form Actived");
-        if (Input.GetButtonDown("Form"))
+        
+        if (Input.GetButtonDown("Form")&&isRage==false&&currentMana==100)
         {
+            Debug.Log("Form Actived");
             currentTime = startTime;
         }
 
@@ -83,24 +91,64 @@ public class Player : MonoBehaviour
 
         if (currentTime > 0f)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
+            //this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
             if(isRage == false)
             {
                 this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
+                
                 isRage = true;
             }
         }
         else if(currentTime <= 0f)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
+            //this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
             if(isRage == true)
             {
                 this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                
                 isRage = false;
             }
         }
-        print(currentTime);
+
+        if(isRage == false)
+        {
+            anim.SetBool("isRage", false);
+        }
+        else
+        {
+            anim.SetBool("isRage", true);
+        }
+
+        //Ulti
+        if(Input.GetButtonDown("Form") && isRage == true && anim.GetBool("isUlti")==false && currentTime > 0f && currentTime <3f)
+        {
+
+            Debug.Log("Ulti");
+
+            
+            currentUltiTime = 2f;
+        }
+        if (currentUltiTime > 0f)
+        {
+            anim.SetBool("isUlti", true);
+        }
+        else if(anim.GetBool("isUlti")==true && currentUltiTime <=0f)
+        {
+            anim.SetBool("isUlti", false);
+            currentTime = 0f;
+            
+        }
+
+        //Debug.Log(currentTime);
     }
+
+    private void ultimate()
+    {
+        
+
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
