@@ -12,11 +12,13 @@ public class PlayerBullet : MonoBehaviour
     private float endAngle = 270f;
     public float fireSpeed;
 
+
     private int Power = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         InvokeRepeating("Fire", 0f, 2f);
     }
 
@@ -47,7 +49,8 @@ public class PlayerBullet : MonoBehaviour
                 Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
                 GameObject bul = BulletPool_P.bulletPoolInstanse.GetBullet();
-                bul.transform.position = transform.position;
+                Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x -0.3f, this.GetComponent<Player>().transform.position.y);
+                bul.transform.position = v;
                 bul.transform.rotation = transform.rotation;
                 bul.SetActive(true);
                 bul.GetComponent<Bullet_P>().SetMoveDirection(bulDir);
@@ -64,7 +67,8 @@ public class PlayerBullet : MonoBehaviour
                 Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
                 GameObject bul = BulletPool_P.bulletPoolInstanse.GetBullet();
-                bul.transform.position = transform.position;
+                Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
+                bul.transform.position = v;
                 bul.transform.rotation = transform.rotation;
                 bul.SetActive(true);
                 bul.GetComponent<Bullet_P>().SetMoveDirection(bulDir);
