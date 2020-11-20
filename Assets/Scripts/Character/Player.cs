@@ -21,9 +21,10 @@ public class Player : MonoBehaviour
     Animator anim;
 
     public float currentTime = 0f;
-    public float startTime = 5f;
+    public float startTime = 7f;
     public float currentUltiTime = 0f;
     public float UltiTime = 1f;
+    
 
     void InputProses()
     {
@@ -102,7 +103,7 @@ public class Player : MonoBehaviour
             if(isRage == false)
             {
                 this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
-                
+               // BulletP.GetComponent<SpriteRenderer>().color = new Color(0, 0, 244);
                 isRage = true;
             }
         }
@@ -112,7 +113,8 @@ public class Player : MonoBehaviour
             if(isRage == true)
             {
                 this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
-                
+                //BulletP.GetComponent<SpriteRenderer>().color = new Color(254, 244, 0);
+
                 isRage = false;
             }
         }

@@ -6,6 +6,7 @@ public class PowerUp : MonoBehaviour
 {
     private Rigidbody2D rb;
     Vector3 lastVelocity;
+    private float despawnTime;
 
     private void Awake()
     {
@@ -21,11 +22,18 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        despawnTime += 1*Time.deltaTime;
         lastVelocity = rb.velocity;
         if (transform.position.y >= -4)
         {
             Debug.Log("Hit");
-            rb.AddForce(new Vector2(-2f * 15f, -10f * 15f));
+            rb.AddForce(new Vector2(-2f * 10f, -10f * 10f));
+        }
+
+        if (despawnTime>=5f)
+        {
+            despawnTime = 0f;
+            Destroy(this.gameObject);
         }
     }
 
