@@ -11,6 +11,8 @@ public class Manager : MonoBehaviour
     public GameObject minionPrefab;
     public float respawnTime = 1f;
     private GameObject boss;
+    public int randomMinion;
+
     void Start()
     {
         boss = Instantiate(Boss1);
@@ -34,6 +36,7 @@ public class Manager : MonoBehaviour
         GameObject a = Instantiate(minionPrefab) as GameObject;
         a.transform.position = new Vector2(Random.Range(-3.5f, 3.5f), 1);
         a.GetComponent<Minion>().ManagerGame = this.gameObject;
+        randomMinion = Random.Range(1, 3);
     }
     IEnumerator startWave()
     {

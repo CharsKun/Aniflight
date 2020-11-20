@@ -169,4 +169,12 @@ public class Player : MonoBehaviour
             Debug.Log("Health : "+ currentHealth);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PowerUpMana"))
+        {
+            currentMana = 20f;
+        }
+    }
 }
