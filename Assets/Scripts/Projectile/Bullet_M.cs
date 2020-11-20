@@ -6,7 +6,6 @@ public class Bullet_M : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
-
     private void OnEnable()
     {
         Invoke("Destroy", 4f);

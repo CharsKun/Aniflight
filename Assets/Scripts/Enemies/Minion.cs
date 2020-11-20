@@ -7,6 +7,9 @@ public class Minion : MonoBehaviour
     public float speed = 3f;
     private Rigidbody2D rb;
     private int Health = 5;
+    private int RandomVariable;
+    public GameObject PowerUp;
+    private GameObject puspawn;
 
     public GameObject ManagerGame;
     // Start is called before the first frame update
@@ -21,8 +24,21 @@ public class Minion : MonoBehaviour
     {
         if(transform.position.y < -15.5f || Health <= 0)
         {
-            if(Health <= 0) ManagerGame.GetComponent<Manager>().count++;
+            if (Health <= 0)
+            {
+                RandomVariable = Random.Range(0, 10);
+                if(RandomVariable == 4)
+                {
+                    puspawn = Instantiate(PowerUp);
+                    puspawn.transform.position = transform.position;
+                    puspawn.transform.rotation = transform.rotation;
+                    puspawn.SetActive(true);
+                }
+                ManagerGame.GetComponent<Manager>().count++;
+            }
             Destroy(this.gameObject);
+            
+
         }
     }
 
