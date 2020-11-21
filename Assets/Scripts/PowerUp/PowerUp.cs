@@ -30,7 +30,7 @@ public class PowerUp : MonoBehaviour
             rb.AddForce(new Vector2(-2f * 10f, -10f * 10f));
         }
 
-        if (despawnTime>=5f)
+        if (despawnTime>=8f)
         {
             despawnTime = 0f;
             Destroy(this.gameObject);
