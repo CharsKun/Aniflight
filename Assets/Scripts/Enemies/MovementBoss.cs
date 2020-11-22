@@ -6,6 +6,8 @@ public class MovementBoss : MonoBehaviour
 {
     private float moveSpeed;
     private bool moveRight;
+    private Renderer rend;
+    private float redTime=0f;
 
     public int maxHealth = 200;
     public int Health;
@@ -18,11 +20,18 @@ public class MovementBoss : MonoBehaviour
         moveRight = true;
         Health = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
+        rend = this.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        redTime -= 1*Time.deltaTime;
+        if (redTime <= 0f)
+        {
+            redTime = 0f;
+            rend.material.color = Color.white;
+        }
 
         if(transform.position.x > 3f)
         {
@@ -45,6 +54,7 @@ public class MovementBoss : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
 
     }
 
@@ -53,6 +63,8 @@ public class MovementBoss : MonoBehaviour
         if (collision.tag == "BulletPlayer")
         {
             Health--;
+            rend.material.color = Color.red;
+            redTime = 0.05f;
             healthBar.setHealth(Health);
             //Debug.Log("Health : "+ Health);
         }
