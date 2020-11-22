@@ -8,6 +8,7 @@ public class MovementBoss : MonoBehaviour
     private bool moveRight;
     private Renderer rend;
     private float redTime=0f;
+    //redTime = waktu berapa lama warna dioverlay merah
 
     public int maxHealth = 200;
     public int Health;

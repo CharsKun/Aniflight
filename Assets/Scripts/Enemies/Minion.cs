@@ -9,6 +9,10 @@ public class Minion : MonoBehaviour
     private int Health = 5;
     private int RandomVariable;
 
+    private Renderer rend;
+    private float redTime = 0f;
+    //redTime = waktu berapa lama warna dioverlay merah
+
     public GameObject PowerUp;
     private GameObject puspawn;
     public GameObject PowerUpMana;
@@ -25,13 +29,20 @@ public class Minion : MonoBehaviour
         Change();
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0f,speed*-1.0f);
-   }
+        rend = this.GetComponent<Renderer>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(transform.position.y < -15.5f || Health <= 0)
+        redTime -= 1 * Time.deltaTime;
+        if (redTime <= 0f)
+        {
+            redTime = 0f;
+            rend.material.color = Color.white;
+        }
+
+        if (transform.position.y < -15.5f || Health <= 0)
         {
             if (Health <= 0)
             {
@@ -83,6 +94,11 @@ public class Minion : MonoBehaviour
         {
             Health--;
             //Debug.Log("Health : "+ Health);
+            rend.material.color = Color.red;
+            redTime = 0.05f;
+            
+
+
         }
     }
 }
