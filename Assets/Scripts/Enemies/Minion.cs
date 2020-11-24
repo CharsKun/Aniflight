@@ -17,6 +17,8 @@ public class Minion : MonoBehaviour
     private GameObject puspawn;
     public GameObject PowerUpMana;
     private GameObject puspawn2;
+    public GameObject PowerUpHealth;
+    private GameObject puspawn3;
 
     public Sprite Minion1;
     public Sprite Minion2;
@@ -62,6 +64,12 @@ public class Minion : MonoBehaviour
                         puspawn2.transform.position = transform.position;
                         puspawn2.transform.rotation = transform.rotation;
                         puspawn2.SetActive(true);
+                    }else if(RandomVariable == 8)
+                    {
+                        puspawn3 = Instantiate(PowerUpHealth);
+                        puspawn3.transform.position = transform.position;
+                        puspawn3.transform.rotation = transform.rotation;
+                        puspawn3.SetActive(true);
                     }
                 }
                 ManagerGame.GetComponent<Manager>().count++;

@@ -10,6 +10,9 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField]
     private float startAngle = 90f;
     private float endAngle = 270f;
+    private float startTime = 10f;
+    private float currentTime;
+
     public float fireSpeed;
 
 
@@ -25,7 +28,12 @@ public class PlayerBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentTime -= 1 * Time.deltaTime;
 
+        if(currentTime <= 0f)
+        {
+            currentTime = 0f;
+        }
     }
 
     public void changeSpeed(float fspeed)
@@ -59,21 +67,27 @@ public class PlayerBullet : MonoBehaviour
             }
         }else if(Power == 2)
         {
-            for (int i = 0; i < bulletsAmount + 1; i++)
+            if(currentTime > 0f)
             {
-                float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
-                
-                Vector3 bulMoveVector = new Vector3(bulDirX, 0f);
-                Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+                for (int i = 0; i < bulletsAmount + 1; i++)
+                {
+                    float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
 
-                GameObject bul = BulletPool_P.bulletPoolInstanse.GetBullet();
-                Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
-                bul.transform.position = v;
-                bul.transform.rotation = transform.rotation;
-                bul.SetActive(true);
-                bul.GetComponent<Bullet_P>().SetMoveDirection(bulDir);
+                    Vector3 bulMoveVector = new Vector3(bulDirX, 0f);
+                    Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-                angle += angleStep;
+                    GameObject bul = BulletPool_P.bulletPoolInstanse.GetBullet();
+                    Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
+                    bul.transform.position = v;
+                    bul.transform.rotation = transform.rotation;
+                    bul.SetActive(true);
+                    bul.GetComponent<Bullet_P>().SetMoveDirection(bulDir);
+
+                    angle += angleStep;
+                }
+            }else if(currentTime <= 0f)
+            {
+                Power = 1;
             }
         }
     }
@@ -83,6 +97,7 @@ public class PlayerBullet : MonoBehaviour
         if(collision.gameObject.CompareTag("PowerUp"))
         {
             Power = 2;
+            currentTime = startTime;
             Debug.Log("Hit");
         }
     }

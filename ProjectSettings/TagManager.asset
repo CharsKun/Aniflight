@@ -12,6 +12,7 @@ TagManager:
   - EnemyBullet
   - BossBullet
   - PowerUpMana
+  - PowerUpHealth
   layers:
   - Default
   - TransparentFX

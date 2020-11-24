@@ -176,5 +176,11 @@ public class Player : MonoBehaviour
         {
             currentMana = 20f;
         }
+
+        if (collision.gameObject.CompareTag("PowerUpHealth"))
+        {
+            currentHealth ++;
+            healthBar.setHealth(currentHealth);
+        }
     }
 }

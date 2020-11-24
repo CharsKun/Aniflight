@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4808538989076176975
+--- !u!1001 &5013963248202624344
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,12 +11,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: eaa545b68a43ce54ea41c8d2ddd8adf3, type: 2}
+      objectReference: {fileID: 9100000, guid: 399250ea5d9d9384e89c5fc710f9d6e0, type: 2}
     - target: {fileID: 6222143362323343768, guid: 11f11690db397214796772078e3b150c,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6190577942403563784, guid: fc0a6b8e21d3fd24db1073fd7d7747e4,
+      objectReference: {fileID: 2903848411162822477, guid: 96236fa288825f84aa2b598cca50f982,
         type: 3}
     - target: {fileID: 6222143362323343769, guid: 11f11690db397214796772078e3b150c,
         type: 3}
@@ -76,12 +76,12 @@ PrefabInstance:
     - target: {fileID: 6222143362323343772, guid: 11f11690db397214796772078e3b150c,
         type: 3}
       propertyPath: m_Name
-      value: PowerUp_Mana Variant
+      value: PowerUp_Health Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6222143362323343772, guid: 11f11690db397214796772078e3b150c,
         type: 3}
       propertyPath: m_TagString
-      value: PowerUpMana
+      value: PowerUpHealth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f11690db397214796772078e3b150c, type: 3}

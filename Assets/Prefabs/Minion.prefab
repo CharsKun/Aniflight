@@ -151,6 +151,8 @@ MonoBehaviour:
   PowerUp: {fileID: 6222143362323343772, guid: 11f11690db397214796772078e3b150c, type: 3}
   PowerUpMana: {fileID: 1504803502920436179, guid: 90445e5e17e286e4d8b774c84f76a3b3,
     type: 3}
+  PowerUpHealth: {fileID: 1426606895110374596, guid: 1ead459e9211b414c8ef37009683fdaa,
+    type: 3}
   Minion1: {fileID: 21300000, guid: 8a5e5d8a5bbcfad4bb2c2b17104847d7, type: 3}
   Minion2: {fileID: 21300000, guid: 24af23b2b7500a5448c6a9deae29af7d, type: 3}
   Minion3: {fileID: 21300000, guid: de010cc7803f5404791f718536f9cfd4, type: 3}
