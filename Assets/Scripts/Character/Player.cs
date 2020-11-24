@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float currentMana;
     public HealthBar healthBar;
     public ManaBar manaBar;
+    public ParticleSystem ManaFull;
 
     private bool isRage = true;
     public Sprite backForm;
@@ -33,7 +34,11 @@ public class Player : MonoBehaviour
 
         moveD = new Vector2(moveX, moveY);
     }
-
+    private void Awake()
+    {
+        ManaFull = Instantiate(ManaFull);
+        ManaFull.transform.position = new Vector2(4f, -15.55f);
+    }
     void Move()
     {
    
@@ -47,13 +52,17 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
         anim = GetComponent<Animator>();
+        ManaFull.Pause();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         InputProses();
         changeForm();
+        //EffectParticle();
+
         currentTime -= 1 * Time.deltaTime;
         currentUltiTime -= 1 * Time.deltaTime;
 
@@ -73,6 +82,13 @@ public class Player : MonoBehaviour
 
             manaBar.setMana(currentMana);
         }
+
+        if (currentMana >= 20f)
+        {
+            ManaFull.Play();
+        }
+
+
     }
 
     void FixedUpdate()
@@ -93,6 +109,8 @@ public class Player : MonoBehaviour
             Debug.Log("Form Actived");
             currentTime = startTime;
             currentMana = 0;
+            ManaFull.Pause();
+            ManaFull.Clear();
         }
 
         BulletP.GetComponent<Bullet_P>().currentTime = currentTime;
@@ -129,14 +147,14 @@ public class Player : MonoBehaviour
         }
 
         //Ulti
-        if(Input.GetButtonDown("Form") && isRage == true && anim.GetBool("isUlti")==false && currentTime > 0f && currentTime <3f)
+        /*if(Input.GetButtonDown("Form") && isRage == true && anim.GetBool("isUlti")==false && currentTime > 0f && currentTime <3f)
         {
 
             Debug.Log("Ulti");
 
             
             currentUltiTime = 2f;
-        }
+        }*/
 
         if (currentUltiTime > 0f)
         {
@@ -158,7 +176,10 @@ public class Player : MonoBehaviour
 
     }
 
-
+    private void EffectParticle()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
