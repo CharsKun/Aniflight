@@ -14,6 +14,7 @@ public class MinionBullet : MonoBehaviour
         //if (!minion.enabled)
         // {
             InvokeRepeating("Fire", 0f, 3f);
+            
         //}
     }
 

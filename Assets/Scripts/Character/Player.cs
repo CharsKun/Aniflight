@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private Vector2 moveD;
 
     public GameObject BulletP;
+    private bool isHit;
     public int maxHealth = 5;
     public int currentHealth;
     public float currentMana;
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        isHit = false;
         InputProses();
         changeForm();
         //EffectParticle();
@@ -187,7 +188,14 @@ public class Player : MonoBehaviour
         {
             currentHealth--;
             healthBar.setHealth(currentHealth);
-            Debug.Log("Health : "+ currentHealth);
+            Debug.Log("Health : " + currentHealth);
+        }
+
+        if(collision.tag == "EnemyBullet" && !isHit)
+        {
+            isHit = true;
+            currentHealth--;
+            healthBar.setHealth(currentHealth);
         }
     }
 
