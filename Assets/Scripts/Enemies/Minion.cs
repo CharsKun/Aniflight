@@ -9,6 +9,7 @@ public class Minion : MonoBehaviour
     private int Health = 5;
     private int RandomVariable;
 
+    public GameObject explode;
     private Renderer rend;
     private float redTime = 0f;
     //redTime = waktu berapa lama warna dioverlay merah
@@ -44,8 +45,8 @@ public class Minion : MonoBehaviour
             rend.material.color = Color.white;
         }
 
-        if (transform.position.y < -15.5f || Health <= 0)
-        {
+        //if (transform.position.y < -15.5f || Health <= 0)
+        //{
             if (Health <= 0)
             {
                 if(transform.position.y <= -5.5f)
@@ -73,11 +74,17 @@ public class Minion : MonoBehaviour
                     }
                 }
                 ManagerGame.GetComponent<Manager>().count++;
-            }
-            Destroy(this.gameObject);
+                Instantiate(explode, transform.position,transform.rotation);
+                Destroy(this.gameObject);
+             }
             
-
+            
+        if(transform.position.y < -15.5f)
+        {
+            Destroy(this.gameObject);
         }
+
+        //}
     }
 
     void Change()

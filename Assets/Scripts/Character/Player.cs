@@ -17,11 +17,15 @@ public class Player : MonoBehaviour
     public ManaBar manaBar;
     public ParticleSystem ManaFull;
 
-    private bool isRage = true;
-    public Sprite backForm;
-    public Sprite Form;
-    Animator anim;
+    private float timeTakeDamage;
+    private bool canTakeDamage;
 
+    private bool isRage = true;
+    // public Sprite backForm;
+    // public Sprite Form;
+    Animator anim;
+    public Animator ShakeEffect;
+   
     public float currentTime = 0f;
     public float startTime = 7f;
     public float currentUltiTime = 0f;
@@ -64,17 +68,32 @@ public class Player : MonoBehaviour
         changeForm();
         //EffectParticle();
 
+        timeTakeDamage += 1 * Time.deltaTime;
         currentTime -= 1 * Time.deltaTime;
-        currentUltiTime -= 1 * Time.deltaTime;
 
         if (currentTime <= 0f)
         {
             currentTime = 0f;
         }
 
+        if(timeTakeDamage >= 1.5f)
+        {
+            canTakeDamage = true;
+            timeTakeDamage = 1.5f;
+        }
+        else
+        {
+            canTakeDamage = false;
+        }
+
         if(currentHealth <= 0)
         {
             Destroy(this.gameObject);
+        }
+
+        if(currentHealth > 5)
+        {
+            currentHealth = 5;
         }
 
         if(currentMana <=20)
@@ -186,16 +205,26 @@ public class Player : MonoBehaviour
     {
         if (collision.tag == "BossBullet")
         {
-            currentHealth--;
-            healthBar.setHealth(currentHealth);
-            Debug.Log("Health : " + currentHealth);
+            if (canTakeDamage)
+            {
+                ShakeEffect.SetTrigger("shake");
+                currentHealth--;
+                healthBar.setHealth(currentHealth);
+                timeTakeDamage = 0f;
+            }
         }
 
         if(collision.tag == "EnemyBullet" && !isHit)
         {
+            
             isHit = true;
-            currentHealth--;
-            healthBar.setHealth(currentHealth);
+            if (canTakeDamage)
+            {
+                ShakeEffect.SetTrigger("shake");
+                currentHealth--;
+                healthBar.setHealth(currentHealth);
+                timeTakeDamage = 0f;
+            }
         }
     }
 

@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d986d398bbc12624d8ce633db0af98a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explodeBoss: {fileID: 1718962827969441692, guid: 7250dc6a0ef849847ae1b522847dcc85,
+    type: 3}
   maxHealth: 200
   Health: 200
   healthBar: {fileID: 6612505786315610059}
@@ -300,7 +302,7 @@ RectTransform:
   m_GameObject: {fileID: 6612505785896788789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.21, y: 1.21, z: 1}
   m_Children: []
   m_Father: {fileID: 6612505786315610058}
   m_RootOrder: 1
@@ -337,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc7d3949ee1fd2c43853f7e1e4455386, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 827554491ae961f43b894ba6f9114dc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

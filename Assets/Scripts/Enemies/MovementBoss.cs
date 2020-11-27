@@ -8,6 +8,7 @@ public class MovementBoss : MonoBehaviour
     private bool moveRight;
     private Renderer rend;
     private float redTime=0f;
+    public GameObject explodeBoss;
     //redTime = waktu berapa lama warna dioverlay merah
 
     public int maxHealth = 200;
@@ -53,6 +54,7 @@ public class MovementBoss : MonoBehaviour
 
         if (Health <= 0)
         {
+            Instantiate(explodeBoss, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
         

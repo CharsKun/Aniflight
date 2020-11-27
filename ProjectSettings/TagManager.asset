@@ -13,6 +13,7 @@ TagManager:
   - BossBullet
   - PowerUpMana
   - PowerUpHealth
+  - ShakeTag
   layers:
   - Default
   - TransparentFX
