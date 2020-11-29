@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class MinionBullet : MonoBehaviour
 {
-    [SerializeField]
-    private int bulletsAmount = 1;
-
+    
     // Start is called before the first frame update
    // Minion minion;
     void Start()
@@ -27,8 +25,8 @@ public class MinionBullet : MonoBehaviour
 
     private void Fire()
     {
-        for (int i = 0; i < bulletsAmount + 1; i++)
-        {
+        //for (int i = 0; i < bulletsAmount + 1; i++)
+        //{
             target = GameObject.FindObjectOfType<Player>();
             Vector2 bulDir = (target.transform.position - transform.position).normalized;
 
@@ -37,6 +35,6 @@ public class MinionBullet : MonoBehaviour
             bul.transform.rotation = transform.rotation;
             bul.SetActive(true);
             bul.GetComponent<Bullet_M>().SetMoveDirection(bulDir);
-        }
+        //}
     }
 }

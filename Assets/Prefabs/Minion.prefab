@@ -134,7 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a4bf68854814e42848262f9f0c945b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 8
 --- !u!114 &6281575863366283659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +152,8 @@ MonoBehaviour:
   PowerUpMana: {fileID: 1504803502920436179, guid: 90445e5e17e286e4d8b774c84f76a3b3,
     type: 3}
   PowerUpHealth: {fileID: 1426606895110374596, guid: 1ead459e9211b414c8ef37009683fdaa,
+    type: 3}
+  PowerUpShield: {fileID: 8390606302904214317, guid: 2234286987284ed4eaa6fdbc776b0cc4,
     type: 3}
   Minion1: {fileID: 21300000, guid: 8a5e5d8a5bbcfad4bb2c2b17104847d7, type: 3}
   Minion2: {fileID: 21300000, guid: 24af23b2b7500a5448c6a9deae29af7d, type: 3}

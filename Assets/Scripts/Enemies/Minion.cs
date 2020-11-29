@@ -20,6 +20,8 @@ public class Minion : MonoBehaviour
     private GameObject puspawn2;
     public GameObject PowerUpHealth;
     private GameObject puspawn3;
+    public GameObject PowerUpShield;
+    private GameObject puspawn4;
 
     public Sprite Minion1;
     public Sprite Minion2;
@@ -51,7 +53,7 @@ public class Minion : MonoBehaviour
             {
                 if(transform.position.y <= -5.5f)
                 {
-                    RandomVariable = Random.Range(0, 10);
+                    RandomVariable = Random.Range(0, 20);
                     if (RandomVariable == 4)
                     {
                         puspawn = Instantiate(PowerUp);
@@ -59,19 +61,28 @@ public class Minion : MonoBehaviour
                         puspawn.transform.rotation = transform.rotation;
                         puspawn.SetActive(true);
                     }
-                    else if (RandomVariable == 6)
+                    else if (RandomVariable == 8)
                     {
                         puspawn2 = Instantiate(PowerUpMana);
                         puspawn2.transform.position = transform.position;
                         puspawn2.transform.rotation = transform.rotation;
                         puspawn2.SetActive(true);
-                    }else if(RandomVariable == 8)
+                    }else if(RandomVariable == 12)
                     {
                         puspawn3 = Instantiate(PowerUpHealth);
                         puspawn3.transform.position = transform.position;
                         puspawn3.transform.rotation = transform.rotation;
                         puspawn3.SetActive(true);
+                    }else if (RandomVariable == 16)
+                    {
+                        puspawn4 = Instantiate(PowerUpShield);
+                        puspawn4.transform.position = transform.position;
+                        puspawn4.transform.rotation = transform.rotation;
+                        puspawn4.SetActive(true);
                     }
+                {
+
+                }
                 }
                 ManagerGame.GetComponent<Manager>().count++;
                 Instantiate(explode, transform.position,transform.rotation);

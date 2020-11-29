@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 924928869532731670}
   - component: {fileID: 924928869532731671}
   - component: {fileID: 924928869532731669}
-  - component: {fileID: 924928869532731668}
   - component: {fileID: 924928869532731667}
   - component: {fileID: 924928869532731666}
   - component: {fileID: 924928869532731665}
+  - component: {fileID: -7614649917742981809}
   m_Layer: 9
   m_Name: Boss1
   m_TagString: Boss1
@@ -101,24 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explodeBoss: {fileID: 1718962827969441692, guid: 7250dc6a0ef849847ae1b522847dcc85,
     type: 3}
-  maxHealth: 200
-  Health: 200
+  maxHealth: 400
+  Health: 400
   healthBar: {fileID: 6612505786315610059}
---- !u!114 &924928869532731668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924928869532731688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38fe2985b2a5c1a409e20f0be7205d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletsAmount: 6
-  startAngle: 90
-  Boss: {fileID: 924928869532731688}
 --- !u!60 &924928869532731667
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -201,6 +186,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.11}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &-7614649917742981809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924928869532731688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fe2985b2a5c1a409e20f0be7205d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 924928869532731688}
 --- !u!1 &6612505785236260172
 GameObject:
   m_ObjectHideFlags: 0

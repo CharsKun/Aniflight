@@ -11,7 +11,7 @@ public class MovementBoss : MonoBehaviour
     public GameObject explodeBoss;
     //redTime = waktu berapa lama warna dioverlay merah
 
-    public int maxHealth = 200;
+    public int maxHealth = 400;
     public int Health;
     public HealthBar_Boss healthBar;
 

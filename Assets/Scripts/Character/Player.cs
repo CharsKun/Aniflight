@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     public GameObject BulletP;
     private bool isHit;
+    private bool isShield;
     public int maxHealth = 5;
     public int currentHealth;
     public float currentMana;
@@ -25,11 +26,12 @@ public class Player : MonoBehaviour
     // public Sprite Form;
     Animator anim;
     public Animator ShakeEffect;
-   
-    public float currentTime = 0f;
-    public float startTime = 7f;
-    public float currentUltiTime = 0f;
-    public float UltiTime = 1f;
+
+    private float shieldTime;
+    private float currentTime = 0f;
+    private float startTime = 7f;
+    //public float currentUltiTime = 0f;
+    //private float UltiTime = 1f;
     
 
     void InputProses()
@@ -71,6 +73,11 @@ public class Player : MonoBehaviour
         timeTakeDamage += 1 * Time.deltaTime;
         currentTime -= 1 * Time.deltaTime;
 
+        if(shieldTime >= 0f)
+        {
+            shieldTime -= 1 * Time.deltaTime;
+        }
+
         if (currentTime <= 0f)
         {
             currentTime = 0f;
@@ -84,6 +91,12 @@ public class Player : MonoBehaviour
         else
         {
             canTakeDamage = false;
+        }
+
+        if (shieldTime <= 0f)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255,255,255,255);
+            isShield = true;
         }
 
         if(currentHealth <= 0)
@@ -176,7 +189,7 @@ public class Player : MonoBehaviour
             currentUltiTime = 2f;
         }*/
 
-        if (currentUltiTime > 0f)
+        /*if (currentUltiTime > 0f)
         {
             anim.SetBool("isUlti", true);
         }
@@ -185,7 +198,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isUlti", false);
             currentTime = 0f;
             
-        }
+        }*/
 
         //Debug.Log(currentTime);
     }
@@ -205,7 +218,7 @@ public class Player : MonoBehaviour
     {
         if (collision.tag == "BossBullet")
         {
-            if (canTakeDamage)
+            if (canTakeDamage && isShield)
             {
                 ShakeEffect.SetTrigger("shake");
                 currentHealth--;
@@ -218,7 +231,7 @@ public class Player : MonoBehaviour
         {
             
             isHit = true;
-            if (canTakeDamage)
+            if (canTakeDamage && isShield)
             {
                 ShakeEffect.SetTrigger("shake");
                 currentHealth--;
@@ -239,6 +252,13 @@ public class Player : MonoBehaviour
         {
             currentHealth ++;
             healthBar.setHealth(currentHealth);
+        }
+
+        if (collision.gameObject.CompareTag("PowerUpShield"))
+        {
+            shieldTime = 5;
+            isShield = false;
+            GetComponent<SpriteRenderer>().color = new Color(0, 0, 255);
         }
     }
 }
