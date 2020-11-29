@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     // public Sprite Form;
     Animator anim;
     public Animator ShakeEffect;
+    public GameObject Defeat;
 
     private float shieldTime;
     private float currentTime = 0f;
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Defeat.SetActive(false);
         currentHealth = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
         anim = GetComponent<Animator>();
@@ -102,6 +104,9 @@ public class Player : MonoBehaviour
         if(currentHealth <= 0)
         {
             Destroy(this.gameObject);
+            Defeat.SetActive(true);
+            Destroy(healthBar.gameObject);
+            Destroy(manaBar.gameObject);
         }
 
         if(currentHealth > 5)

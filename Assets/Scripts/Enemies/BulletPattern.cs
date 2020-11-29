@@ -18,7 +18,7 @@ public class BulletPattern : MonoBehaviour
     {
         InvokeRepeating("Fire", 0f, 0.5f);
         InvokeRepeating("Fire2", 0f, 0.03f);
-        InvokeRepeating("Fire3", 0f, 0.3f);
+        InvokeRepeating("Fire3", 0f, 0.4f);
     }
 
     // Update is called once per frame

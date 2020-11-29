@@ -14,7 +14,7 @@ public class MovementBoss : MonoBehaviour
     public int maxHealth = 400;
     public int Health;
     public HealthBar_Boss healthBar;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +56,7 @@ public class MovementBoss : MonoBehaviour
         if (Health <= 0)
         {
             Instantiate(explodeBoss, transform.position, transform.rotation);
-            Destroy(this.gameObject);     
-            Debug.Log("Victory");
+            Destroy(this.gameObject);
         }
         
 

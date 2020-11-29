@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     public GameObject minionPrefab;
     public float respawnTime = 1f;
     private GameObject boss;
+    public GameObject Victory;
     public int randomMinion;
 
     void Start()
@@ -29,7 +30,12 @@ public class Manager : MonoBehaviour
         if (count == maxCount)
         {
             boss.SetActive(true);
-        }   
+        }
+
+        if(boss.GetComponent<MovementBoss>().Health <= 0)
+        {
+            Victory.SetActive(true);
+        }
     }
     private void spawnMinion()
     {
