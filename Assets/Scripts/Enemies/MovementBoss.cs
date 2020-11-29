@@ -23,6 +23,7 @@ public class MovementBoss : MonoBehaviour
         Health = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
         rend = this.GetComponent<Renderer>();
+        
     }
 
     // Update is called once per frame
@@ -55,7 +56,8 @@ public class MovementBoss : MonoBehaviour
         if (Health <= 0)
         {
             Instantiate(explodeBoss, transform.position, transform.rotation);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);     
+            Debug.Log("Victory");
         }
         
 

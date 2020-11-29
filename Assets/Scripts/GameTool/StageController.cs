@@ -13,6 +13,9 @@ public class StageController : MonoBehaviour
     private List<List<Vector2>> paths;
     private int pathCount;
 
+    private bool bossSpawned = false;
+    public GameObject boss;
+
     [Serializable]
     public struct MinionSpawnData
     {
@@ -52,6 +55,7 @@ public class StageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         count = 0;
         //StartCoroutine(startWave());
 
@@ -143,19 +147,26 @@ public class StageController : MonoBehaviour
             else
             {
                 WaveProgress = currentWaveTime / spawnEndTime;
-                if (WaveProgress > 1f)
+                /*if (WaveProgress > 1f)
                 {
                     WaveProgress = 1f;
                     
-                }
+                }*/
 
+                if (bossSpawned == false)
+                {
+                    var a = Instantiate(boss) as GameObject;
+                    a.transform.position = new Vector2(-0.02423012f, -1.798349f);
+                    bossSpawned = true;
+                }
                 /*if (currentWaveTime >= spawnEndTime && !hasEnemy)
                 {
                     WaveIndex++;
                     currentWaveTime = 0;
                     spawnCount = 0;
                 }*/
-            }
+            } 
         }
+       
     }
 }
