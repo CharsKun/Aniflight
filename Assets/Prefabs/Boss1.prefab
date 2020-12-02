@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 924928869532731666}
   - component: {fileID: 924928869532731665}
   - component: {fileID: -7614649917742981809}
+  - component: {fileID: 5220943004181209814}
   m_Layer: 9
   m_Name: Boss1
   m_TagString: Boss1
@@ -199,6 +200,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boss: {fileID: 924928869532731688}
+--- !u!95 &5220943004181209814
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924928869532731688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62a2a1e44daff974086449ea62e5a246, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6612505785236260172
 GameObject:
   m_ObjectHideFlags: 0
