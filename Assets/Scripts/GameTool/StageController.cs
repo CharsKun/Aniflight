@@ -15,6 +15,9 @@ public class StageController : MonoBehaviour
 
     private bool bossSpawned = false;
     public GameObject boss;
+    private GameObject a;
+    public GameObject Victory;
+    public GameObject Defeat;
 
     [Serializable]
     public struct MinionSpawnData
@@ -43,6 +46,8 @@ public class StageController : MonoBehaviour
     public float WaveProgress { get; private set; }
 
     public WaveData[] waves;
+
+    private bool hehe=false;
 
     private int spawnCount;
     private float spawnTimer;
@@ -155,10 +160,25 @@ public class StageController : MonoBehaviour
 
                 if (bossSpawned == false)
                 {
-                    var a = Instantiate(boss) as GameObject;
+                    a = Instantiate(boss) as GameObject;
                     a.transform.position = new Vector2(-0.02423012f, -1.798349f);
                     bossSpawned = true;
                 }
+                else
+                {
+                    if (!hehe)
+                    {
+                        if (a.GetComponent<MovementBoss>().Health <= 0)
+                        {
+                            Defeat.SetActive(false);
+                            Victory.SetActive(true);
+                            hehe = true;
+                        }
+                    }
+                }
+
+
+
                 /*if (currentWaveTime >= spawnEndTime && !hasEnemy)
                 {
                     WaveIndex++;
@@ -167,6 +187,8 @@ public class StageController : MonoBehaviour
                 }*/
             } 
         }
-       
+
+        
+
     }
 }

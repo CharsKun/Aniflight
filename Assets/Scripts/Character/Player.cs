@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     Animator anim;
     public Animator ShakeEffect;
     public GameObject Defeat;
+    public GameObject Victory;
 
     private float shieldTime;
     private float currentTime = 0f;
@@ -103,10 +104,14 @@ public class Player : MonoBehaviour
 
         if(currentHealth <= 0)
         {
+            ManaFull.Clear();
+            ManaFull.Pause();
+            Victory.SetActive(false);
             Destroy(this.gameObject);
             Defeat.SetActive(true);
             Destroy(healthBar.gameObject);
             Destroy(manaBar.gameObject);
+            
         }
 
         if(currentHealth > 5)
