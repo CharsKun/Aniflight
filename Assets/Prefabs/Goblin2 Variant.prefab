@@ -10,18 +10,24 @@ PrefabInstance:
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.33240128
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2906375563648483240, guid: 084ee172d124055479e8613f38bd8eab,
+        type: 3}
     - target: {fileID: 973502658685308865, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,5 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8776232482800206986, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5fa6a61553ee50248b18a7b5ae669443, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e3e0593596168f4fa802b76d955608f, type: 3}
