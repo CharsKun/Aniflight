@@ -110,6 +110,16 @@ public class MinionController : MonoBehaviour
             rend.material.color = Color.red;
             redTime = 0.05f;
         }
+        if (collision.tag == "BulletKnightBurst")
+        {
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+        }
     }
 }
 

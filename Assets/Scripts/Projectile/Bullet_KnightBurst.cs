@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet_KnightBurst : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
+    public GameObject Player;
 
+    //public bool validation;
+    private float existTime;
+
+    public float currentTime;
     private void OnEnable()
     {
-        Invoke("Destroy", 2.3f);
+        Invoke("Destroy", 1.7f);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 7f;
+        moveSpeed = 9f;
+        // validation = true;
     }
 
     // Update is called once per frame
@@ -41,9 +47,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player"||collision.tag == "BulletKnightBurst")
+        if (collision.tag == "Boss1" || collision.tag == "Minion")
         {
-            gameObject.SetActive(false);
+            //Player.GetComponent<Player>().currentMana++;
+            //gameObject.SetActive(false);
         }
     }
 }

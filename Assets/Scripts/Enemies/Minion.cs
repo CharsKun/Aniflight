@@ -116,15 +116,23 @@ public class Minion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "BulletPlayer")
+        if (collision.tag == "BulletPlayer" )
         {
             Health--;
             //Debug.Log("Health : "+ Health);
             rend.material.color = Color.red;
             redTime = 0.05f;
-            
-
-
         }
+
+        if(collision.tag == "BulletKnightBurst"){
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+            Health--;
+        }
+
     }
 }
