@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private float timeTakeDamage;
     private bool canTakeDamage;
 
-    public bool isRage = false;
+    private bool isRage = true;
     // public Sprite backForm;
     // public Sprite Form;
     Animator anim;
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     private float shieldTime;
     private float currentTime = 0f;
-    private float startTime = 3f;
+    private float startTime = 7f;
     //public float currentUltiTime = 0f;
     //private float UltiTime = 1f;
     
@@ -149,7 +149,7 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Form")&&isRage==false && currentMana>=20)
         {
-            //Debug.Log("Form Actived");
+            Debug.Log("Form Actived");
             currentTime = startTime;
             currentMana = 0;
             ManaFull.Pause();
@@ -163,8 +163,7 @@ public class Player : MonoBehaviour
             //this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
             if(isRage == false)
             {
-                this.GetComponent<PlayerBullet>().changeSpeed(1f);
-                
+                this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
                // BulletP.GetComponent<SpriteRenderer>().color = new Color(0, 0, 244);
                 isRage = true;
             }

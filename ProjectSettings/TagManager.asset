@@ -15,7 +15,6 @@ TagManager:
   - PowerUpHealth
   - ShakeTag
   - PowerUpShield
-  - BulletKnightBurst
   layers:
   - Default
   - TransparentFX
