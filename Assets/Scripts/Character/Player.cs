@@ -149,7 +149,7 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Form")&&isRage==false && currentMana>=20)
         {
-            Debug.Log("Form Actived");
+            //Debug.Log("Form Actived");
             currentTime = startTime;
             currentMana = 0;
             ManaFull.Pause();

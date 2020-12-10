@@ -171,12 +171,10 @@ MonoBehaviour:
   currentMana: 0
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
-  backForm: {fileID: 21300000, guid: 4e490536fe064db418f54a0ebc7103f0, type: 3}
-  Form: {fileID: 21300000, guid: 4773aed3566e1b74a8e4f86875f79437, type: 3}
-  currentTime: 0
-  startTime: 5
-  currentUltiTime: 0
-  UltiTime: 1
+  ManaFull: {fileID: 0}
+  ShakeEffect: {fileID: 0}
+  Defeat: {fileID: 0}
+  Victory: {fileID: 0}
 --- !u!114 &8538135375285016740
 MonoBehaviour:
   m_ObjectHideFlags: 0
