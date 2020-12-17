@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1-2
+  m_Text: Stage 2
 --- !u!222 &121734097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 447149803}
   - component: {fileID: 447149802}
   m_Layer: 5
-  m_Name: Stage1-5
+  m_Name: Stage5 Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1-3
+  m_Text: Stage 3
 --- !u!222 &619796883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1-5
+  m_Text: Stage 5 BOSS
 --- !u!222 &768340857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 955698678}
   - component: {fileID: 955698677}
   m_Layer: 5
-  m_Name: Stage1-1
+  m_Name: Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 1085250524}
   - component: {fileID: 1085250523}
   m_Layer: 5
-  m_Name: Stage1-2
+  m_Name: Stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1021,7 +1021,7 @@ GameObject:
   - component: {fileID: 1186949215}
   - component: {fileID: 1186949214}
   m_Layer: 5
-  m_Name: Stage1-4
+  m_Name: Stage4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1-4
+  m_Text: Stage 4
 --- !u!222 &1703732531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 1825857739}
   - component: {fileID: 1825857738}
   m_Layer: 5
-  m_Name: Stage1-3
+  m_Name: Stage3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1701,7 +1701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 1-1
+  m_Text: Stage 1
 --- !u!222 &2136962069
 CanvasRenderer:
   m_ObjectHideFlags: 0
