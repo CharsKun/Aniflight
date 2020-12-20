@@ -161,7 +161,7 @@ MonoBehaviour:
   targetPlayer: 0
   atkSpeed: 1
   multiple: 1
-  bulletCount: 3
+  bulletCount: 4
   startAngle: 120
   endAngle: 240
   rapidFire: 0

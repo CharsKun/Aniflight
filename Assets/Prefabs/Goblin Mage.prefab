@@ -88,6 +88,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin Mage
       objectReference: {fileID: 0}
+    - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
+      propertyPath: bulletCount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: moveSpeed

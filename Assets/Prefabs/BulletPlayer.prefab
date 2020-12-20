@@ -96,7 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bb8224034015f42a279d255828dc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 9
   Player: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257, type: 3}
+  Projectile1: {fileID: 21300000, guid: e56b33336f5b5134aa5324ddcf405890, type: 3}
+  Projectile2: {fileID: 21300000, guid: cb5308f4b051a2943afb4a4f1ae91fa7, type: 3}
   currentTime: 0
 --- !u!60 &7557857445033923632
 PolygonCollider2D:

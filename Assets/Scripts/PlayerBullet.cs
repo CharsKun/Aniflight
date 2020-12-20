@@ -13,9 +13,6 @@ public class PlayerBullet : MonoBehaviour
     private float startTime = 10f;
     private float currentTime;
 
-    public float fireSpeed;
-
-
     private int Power = 1;
 
     // Start is called before the first frame update

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4527823292663204967
+--- !u!114 &-5579398821257019697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,9 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4106456095085573293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b85b8811185991f4e8e544d19e9effef, type: 3}
+  m_Script: {fileID: 11500000, guid: e5a4bf68854814e42848262f9f0c945b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPlayer: 0
+  atkSpeed: 0
+  multiple: 1
+  bulletCount: 4
+  startAngle: 120
+  endAngle: 240
+  rapidFire: 0
+  bulletWave: 1
 --- !u!1001 &3854944449268693870
 PrefabInstance:
   m_ObjectHideFlags: 0

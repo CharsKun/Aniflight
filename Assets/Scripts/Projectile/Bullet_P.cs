@@ -5,9 +5,11 @@ using UnityEngine;
 public class Bullet_P : MonoBehaviour
 {
     private Vector2 moveDirection;
-    private float moveSpeed;
+    public float moveSpeed;
     public GameObject Player;
 
+    public Sprite Projectile1;
+    public Sprite Projectile2;
     //public bool validation;
 
     public float currentTime;
@@ -19,7 +21,15 @@ public class Bullet_P : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 9f;
+        int chooseCharacter = PlayerPrefs.GetInt("Character");
+        if(chooseCharacter == 1)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Projectile1;
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Projectile2;
+        }
        // validation = true;
     }
 
