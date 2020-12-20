@@ -159,13 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: 0
-  atkSpeed: 1
+  atkSpeed: 9.3
   multiple: 1
   bulletCount: 4
   startAngle: 120
   endAngle: 240
   rapidFire: 0
-  bulletWave: 2
+  bulletWave: 3
 --- !u!95 &8776232482800206986
 Animator:
   serializedVersion: 3
