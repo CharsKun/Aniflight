@@ -106,9 +106,9 @@ public class Player : MonoBehaviour
         {
             ManaFull.Clear();
             ManaFull.Pause();
-            Victory.SetActive(false);
             Destroy(this.gameObject);
             Defeat.SetActive(true);
+            Victory.SetActive(false);
             Destroy(healthBar.gameObject);
             Destroy(manaBar.gameObject);
             

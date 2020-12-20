@@ -17,7 +17,7 @@ public class BulletPattern : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Fire", 0f, 0.5f);
-        InvokeRepeating("Fire2", 0f, 0.03f);
+        InvokeRepeating("Fire2", 0f, 0.1f);
         InvokeRepeating("Fire3", 0f, 0.4f);
     }
 
@@ -87,7 +87,7 @@ public class BulletPattern : MonoBehaviour
         }
     }
 
-    private void Fire2()
+    /*private void Fire2()
     {
         if (Boss.GetComponent<MovementBoss>().Health <= Boss.GetComponent<MovementBoss>().maxHealth/4)
         {
@@ -104,6 +104,24 @@ public class BulletPattern : MonoBehaviour
             bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
 
             angle2 += 20f;
+        }
+    }*/
+
+        private void Fire2()
+    {
+        if (Boss.GetComponent<MovementBoss>().Health <= Boss.GetComponent<MovementBoss>().maxHealth / 4)
+        {
+            float bulDirX = transform.position.x + Mathf.Sin((Random.Range(240f-90f, 300f-90f) * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos((Random.Range(240f-90f, 300f-90f) * Mathf.PI) / 180f);
+
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+
+            GameObject bul = BulletPool.bulletPoolInstanse.GetBullet();
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
         }
     }
 

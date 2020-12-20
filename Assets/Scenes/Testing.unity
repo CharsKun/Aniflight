@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boss1: {fileID: 924928869532731688, guid: ffaebfcb73f5af94fab0980f1de524ad, type: 3}
   count: 0
-  maxCount: 10
+  maxCount: 0
   minionPrefab: {fileID: 4079704366788068840, guid: 807bd0b3fb1a0144ba82c6cbe75625d0,
     type: 3}
   respawnTime: 1
