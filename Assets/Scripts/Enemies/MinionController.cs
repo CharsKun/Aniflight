@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinionController : MonoBehaviour
 {   
-    private float moveSpeed = 3f;
+    public float moveSpeed = 3f;
 
     public int pathIndex;
     private int pathPointIndex;
@@ -13,7 +13,7 @@ public class MinionController : MonoBehaviour
 
     //public float speed = 3f;
     private Rigidbody2D rb;
-    private int Health = 5;
+    public int Health = 5;
     private int RandomVariable;
 
     public GameObject explode;
