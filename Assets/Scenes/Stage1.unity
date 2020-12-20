@@ -1937,17 +1937,17 @@ MonoBehaviour:
   - spawns:
     - minion: {fileID: 145411754036564859, guid: 68e2c01fd2930654ab62b67905acf13f,
         type: 3}
-      delay: 0.3
+      delay: 1
       amount: 9
-      interval: 1
+      interval: 0.3
       waypointIndex: 2
     time: 15
   - spawns:
     - minion: {fileID: 3693792020941821238, guid: 60137e79a66b922419ad57650831eb90,
         type: 3}
-      delay: 1
+      delay: 2
       amount: 1
-      interval: 1
+      interval: 2
       waypointIndex: 0
     time: 10
 --- !u!4 &1329001805
