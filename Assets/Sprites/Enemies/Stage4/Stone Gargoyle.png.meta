@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: c818cd70e70915548a0f20694cbbc37d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5315746485377766505
+    second: Stone Gargoyle_0
+  - first:
+      213: 6833083663571705527
+    second: Stone Gargoyle_1
+  - first:
+      213: -6462433284978533359
+    second: Stone Gargoyle_2
+  - first:
+      213: 5374269759762236990
+    second: Stone Gargoyle_3
+  - first:
+      213: -1632551943883054422
+    second: Stone Gargoyle_4
+  - first:
+      213: 3892671908086854441
+    second: Stone Gargoyle_5
+  - first:
+      213: 5063816851598398107
+    second: Stone Gargoyle_6
+  - first:
+      213: -1610436467293576252
+    second: Stone Gargoyle_7
+  - first:
+      213: 9215819219594695566
+    second: Stone Gargoyle_8
+  - first:
+      213: -4415559907905005917
+    second: Stone Gargoyle_9
+  - first:
+      213: 7564764031276271390
+    second: Stone Gargoyle_10
+  - first:
+      213: 6009004549217554393
+    second: Stone Gargoyle_11
+  - first:
+      213: -3140868145931230406
+    second: Stone Gargoyle_12
+  - first:
+      213: 8939183913865771282
+    second: Stone Gargoyle_13
+  - first:
+      213: -6806169380645885607
+    second: Stone Gargoyle_14
+  - first:
+      213: -8123266168693591573
+    second: Stone Gargoyle_15
+  - first:
+      213: 1827557177040433780
+    second: Stone Gargoyle_16
+  - first:
+      213: -5732498517434835260
+    second: Stone Gargoyle_17
+  - first:
+      213: -3537940801622767382
+    second: Stone Gargoyle_18
+  - first:
+      213: -3994207239216297386
+    second: Stone Gargoyle_19
+  - first:
+      213: 193671547756258249
+    second: Stone Gargoyle_20
+  - first:
+      213: -6587246961769957199
+    second: Stone Gargoyle_21
+  - first:
+      213: 8339812939896121118
+    second: Stone Gargoyle_22
+  - first:
+      213: -2270918577610253572
+    second: Stone Gargoyle_23
+  - first:
+      213: -6636027644036116675
+    second: Stone Gargoyle_24
+  - first:
+      213: -3738351279067728364
+    second: Stone Gargoyle_25
+  - first:
+      213: -5302060930173678515
+    second: Stone Gargoyle_26
+  - first:
+      213: 257158552789623014
+    second: Stone Gargoyle_27
+  - first:
+      213: -5867376339427720999
+    second: Stone Gargoyle_28
+  - first:
+      213: 6944864703714214802
+    second: Stone Gargoyle_29
+  - first:
+      213: -5189706486723701341
+    second: Stone Gargoyle_30
+  - first:
+      213: -8839528568585860229
+    second: Stone Gargoyle_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stone Gargoyle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1130
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96419f0b34355c940800000000000000
+      internalID: 5315746485377766505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1130
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be57b7836df3de50800000000000000
+      internalID: 6833083663571705527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1130
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c9130ba23d056a0800000000000000
+      internalID: -6462433284978533359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 570
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3680c55fdd359a40800000000000000
+      internalID: 5374269759762236990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 570
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa22a7b18a20859e0800000000000000
+      internalID: -1632551943883054422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 570
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923b8a4e97c850630800000000000000
+      internalID: 3892671908086854441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stone Gargoyle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 512
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92d827e89a464640800000000000000
+      internalID: 5063816851598398107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

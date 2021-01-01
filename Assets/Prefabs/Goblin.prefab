@@ -158,14 +158,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a4bf68854814e42848262f9f0c945b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlayer: 0
+  targetPlayer: 1
   atkSpeed: 9.3
-  multiple: 1
-  bulletCount: 4
+  multiple: 0
+  bulletCount: 5
   startAngle: 120
   endAngle: 240
-  rapidFire: 0
+  rapidFire: 1
   bulletWave: 3
+  waitTime: 0
 --- !u!95 &8776232482800206986
 Animator:
   serializedVersion: 3
