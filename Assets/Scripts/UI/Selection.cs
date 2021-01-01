@@ -8,12 +8,12 @@ public class Selection : MonoBehaviour
     public void Knight()
     {
         PlayerPrefs.SetInt("Character", 1);
-        SceneManager.LoadScene("Stage2");
+        SceneManager.LoadScene("StageSelection");
     }
 
     public void Archer()
     {
         PlayerPrefs.SetInt("Character", 2);
-        SceneManager.LoadScene("Stage2");
+        SceneManager.LoadScene("StageSelection");
     }
 }

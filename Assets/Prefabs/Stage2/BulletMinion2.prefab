@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7860573556177027692}
   - component: {fileID: 2650410306427526541}
   - component: {fileID: 2543882522459254329}
+  - component: {fileID: -6940903973609243045}
   - component: {fileID: 7573184911977043507}
   m_Layer: 0
   m_Name: BulletMinion2
@@ -121,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.12
---- !u!114 &7573184911977043507
+--- !u!114 &-6940903973609243045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +130,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7154188202461046126}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc8d51780b81d44da5d5ee51a803a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7573184911977043507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154188202461046126}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15879ce1d84539e4bb1bc8d8c200444b, type: 3}
   m_Name: 

@@ -1,6 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1118591156017568952
+--- !u!114 &7388143996008381754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383675856185227188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a4bf68854814e42848262f9f0c945b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPlayer: 0
+  atkSpeed: 6
+  multiple: 1
+  bulletCount: 5
+  startAngle: 160
+  endAngle: 200
+  rapidFire: 1
+  bulletWave: 4
+  waitTime: 0
+--- !u!1001 &2211652652702529655
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,25 +30,25 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1788626132936788117, guid: f46f278b021503440aa932c96aaed0c1,
+        type: 3}
+    - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.5471698
       objectReference: {fileID: 0}
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.5471698
       objectReference: {fileID: 0}
     - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.5471698
       objectReference: {fileID: 0}
-    - target: {fileID: 973502658685308864, guid: 8e3e0593596168f4fa802b76d955608f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2906375563648483240, guid: 084ee172d124055479e8613f38bd8eab,
-        type: 3}
     - target: {fileID: 973502658685308865, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,17 +107,12 @@ PrefabInstance:
     - target: {fileID: 973502658685308867, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Name
-      value: Goblin Mage
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
-        type: 3}
-      propertyPath: bulletCount
-      value: 4
+      value: Owl
       objectReference: {fileID: 0}
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
@@ -107,6 +123,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5fa6a61553ee50248b18a7b5ae669443, type: 2}
-    m_RemovedComponents: []
+      objectReference: {fileID: 9100000, guid: 7dcb270213469fa43b32e3f68b0a4a0a, type: 2}
+    m_RemovedComponents:
+    - {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e3e0593596168f4fa802b76d955608f, type: 3}
+--- !u!1 &1383675856185227188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 973502658685308867, guid: 8e3e0593596168f4fa802b76d955608f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2211652652702529655}
+  m_PrefabAsset: {fileID: 0}

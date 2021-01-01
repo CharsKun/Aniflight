@@ -139,7 +139,7 @@ MonoBehaviour:
   moveSpeed: 5
   pathIndex: 0
   spawnTime: 0
-  Health: 10
+  Health: 6
   explode: {fileID: 5651472930102876878, guid: 1aa6ea3e6f97728449f85ab3e48b3f17, type: 3}
   PowerUp: {fileID: 6222143362323343772, guid: 11f11690db397214796772078e3b150c, type: 3}
   PowerUpMana: {fileID: 1504803502920436179, guid: 90445e5e17e286e4d8b774c84f76a3b3,
@@ -159,12 +159,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: 1
-  atkSpeed: 9.3
+  atkSpeed: 7
   multiple: 0
   bulletCount: 5
   startAngle: 120
   endAngle: 240
-  rapidFire: 1
+  rapidFire: 0
   bulletWave: 3
   waitTime: 0
 --- !u!95 &8776232482800206986

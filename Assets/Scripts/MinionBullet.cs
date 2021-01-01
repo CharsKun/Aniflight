@@ -47,7 +47,7 @@ public class MinionBullet : MonoBehaviour
         {
             waitTime += 1f * Time.deltaTime;
             rapidOn = false;
-            Debug.Log("wait");
+            //Debug.Log("wait");
         }
         else
         {
@@ -63,7 +63,7 @@ public class MinionBullet : MonoBehaviour
         //{
         if (targetPlayer&&!rapidFire&&!multiple)
         {
-            target = GameObject.FindObjectOfType<Player>();
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); //<Player>();
             Vector2 bulDir = (target.transform.position - transform.position).normalized;
 
             GameObject bul = BulletPool_M.bulletPoolInstanse.GetBullet();
