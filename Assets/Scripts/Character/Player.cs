@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeTakeDamage = 1.5f;
         Defeat.SetActive(false);
         currentHealth = maxHealth;
         healthBar.Setmaxhealth(maxHealth);
@@ -99,6 +100,10 @@ public class Player : MonoBehaviour
         {
             canTakeDamage = true;
             timeTakeDamage = 1.5f;
+            if(isShield == true)
+            {
+                GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+            }
         }
         else
         {
@@ -140,6 +145,10 @@ public class Player : MonoBehaviour
             ManaFull.Play();
         }
 
+        if(canTakeDamage == false)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,.5f);
+        }
 
     }
 

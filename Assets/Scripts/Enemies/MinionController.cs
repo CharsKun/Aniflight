@@ -79,7 +79,7 @@ public class MinionController : MonoBehaviour
                     puspawn4 = Instantiate(PowerUpShield);
                     puspawn4.transform.position = transform.position;
                     puspawn4.transform.rotation = transform.rotation;
-                    puspawn.SetActive(true);
+                    puspawn4.SetActive(true);
                 }
             }
             //ManagerGame.GetComponent<Manager>().count++;
