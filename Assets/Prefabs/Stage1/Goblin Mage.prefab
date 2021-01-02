@@ -128,6 +128,12 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
+      propertyPath: PowerUpShield
+      value: 
+      objectReference: {fileID: 8390606302904214317, guid: 2234286987284ed4eaa6fdbc776b0cc4,
+        type: 3}
     - target: {fileID: 8776232482800206986, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: m_Controller

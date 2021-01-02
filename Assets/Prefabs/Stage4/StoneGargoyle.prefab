@@ -16,8 +16,8 @@ MonoBehaviour:
   atkSpeed: 7
   multiple: 1
   bulletCount: 7
-  startAngle: 150
-  endAngle: 230
+  startAngle: 140
+  endAngle: 220
   rapidFire: 1
   bulletWave: 4
   waitTime: 0

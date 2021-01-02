@@ -146,6 +146,8 @@ MonoBehaviour:
     type: 3}
   PowerUpHealth: {fileID: 1426606895110374596, guid: 1ead459e9211b414c8ef37009683fdaa,
     type: 3}
+  PowerUpShield: {fileID: 8390606302904214317, guid: 2234286987284ed4eaa6fdbc776b0cc4,
+    type: 3}
 --- !u!114 &4393580419001870871
 MonoBehaviour:
   m_ObjectHideFlags: 0

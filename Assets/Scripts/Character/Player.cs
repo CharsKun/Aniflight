@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     // public Sprite backForm;
     // public Sprite Form;
     Animator anim;
+
     public Animator ShakeEffect;
     public GameObject Defeat;
     public GameObject Victory;
@@ -63,6 +64,14 @@ public class Player : MonoBehaviour
         healthBar.Setmaxhealth(maxHealth);
         anim = GetComponent<Animator>();
         ManaFull.Pause();
+
+        if(PlayerPrefs.GetInt("Character") == 1)
+        {
+            anim.SetInteger("Character", 1);
+        }else if(PlayerPrefs.GetInt("Character") == 2)
+        {
+            anim.SetInteger("Character", 2);
+        }
     }
 
     // Update is called once per frame

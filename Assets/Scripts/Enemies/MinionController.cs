@@ -27,6 +27,8 @@ public class MinionController : MonoBehaviour
     private GameObject puspawn2;
     public GameObject PowerUpHealth;
     private GameObject puspawn3;
+    public GameObject PowerUpShield;
+    private GameObject puspawn4;
 
     //public GameObject ManagerGame;
 
@@ -52,26 +54,32 @@ public class MinionController : MonoBehaviour
             if (transform.position.y <= -5.5f)
             {
                 RandomVariable = Random.Range(0, 10);
-                if (RandomVariable == 4)
+                if (RandomVariable == 2)
                 {
                     puspawn = Instantiate(PowerUp);
                     puspawn.transform.position = transform.position;
                     puspawn.transform.rotation = transform.rotation;
                     puspawn.SetActive(true);
                 }
-                else if (RandomVariable == 6)
+                else if (RandomVariable == 4)
                 {
                     puspawn2 = Instantiate(PowerUpMana);
                     puspawn2.transform.position = transform.position;
                     puspawn2.transform.rotation = transform.rotation;
                     puspawn2.SetActive(true);
                 }
-                else if (RandomVariable == 8)
+                else if (RandomVariable == 6)
                 {
                     puspawn3 = Instantiate(PowerUpHealth);
                     puspawn3.transform.position = transform.position;
                     puspawn3.transform.rotation = transform.rotation;
                     puspawn3.SetActive(true);
+                }else if(RandomVariable == 8)
+                {
+                    puspawn4 = Instantiate(PowerUpShield);
+                    puspawn4.transform.position = transform.position;
+                    puspawn4.transform.rotation = transform.rotation;
+                    puspawn.SetActive(true);
                 }
             }
             //ManagerGame.GetComponent<Manager>().count++;
