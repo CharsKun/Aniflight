@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject Pause;
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -23,10 +24,24 @@ public class MainMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void StageSelection()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        this.gameObject.SetActive(false);
+    }
+
+    public void PauseMenu()
+    {
+        Time.timeScale = 0f;
+        Pause.SetActive(true);
     }
 }

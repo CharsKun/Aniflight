@@ -36,6 +36,7 @@ public class Manager : MonoBehaviour
         {
             Victory.SetActive(true);
         }
+
     }
     private void spawnMinion()
     {
