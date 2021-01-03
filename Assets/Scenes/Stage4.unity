@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccc1144e96cfdb4a827756b64b9d738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pause: {fileID: 0}
 --- !u!223 &93819234
 Canvas:
   m_ObjectHideFlags: 0
@@ -381,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccc1144e96cfdb4a827756b64b9d738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pause: {fileID: 0}
 --- !u!223 &245665824
 Canvas:
   m_ObjectHideFlags: 0
@@ -1623,6 +1625,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8538135375285016736, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538135375285016736, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8538135375285016737, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: healthBar
@@ -1879,7 +1891,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3883009451561627601, guid: 7d20a2c63fe85d34abb7d0f1a6e40943,
+      objectReference: {fileID: 2788089956977029842, guid: 6831a726fcd07f441b2ec40903e792f8,
         type: 3}
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
@@ -1894,6 +1906,21 @@ PrefabInstance:
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
