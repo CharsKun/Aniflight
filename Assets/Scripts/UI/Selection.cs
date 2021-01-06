@@ -16,10 +16,4 @@ public class Selection : MonoBehaviour
         PlayerPrefs.SetInt("Character", 2);
         SceneManager.LoadScene("StageSelection");
     }
-
-    public void Mage()
-    {
-        PlayerPrefs.SetInt("Character", 3);
-        SceneManager.LoadScene("StageSelection");
-    }
 }
