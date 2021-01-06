@@ -10,6 +10,7 @@ public class Bullet_P : MonoBehaviour
 
     public Sprite Projectile1;
     public Sprite Projectile2;
+    public Sprite Projectile3;
     //public bool validation;
 
     public float currentTime;
@@ -26,9 +27,13 @@ public class Bullet_P : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Projectile1;
         }
-        else
+        else if(chooseCharacter == 2)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Projectile2;
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Projectile3;
         }
        // validation = true;
     }
