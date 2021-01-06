@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject Pause;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -19,6 +20,21 @@ public class MainMenu : MonoBehaviour
     public void stage1()
     {
         SceneManager.LoadScene("Stage1");
+    }
+
+    public void stage2()
+    {
+        SceneManager.LoadScene("Stage2");
+    }
+
+    public void stage3()
+    {
+        SceneManager.LoadScene("Stage3");
+    }
+
+    public void stage4()
+    {
+        SceneManager.LoadScene("Stage4");
     }
 
     public void Restart()

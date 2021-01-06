@@ -72,6 +72,9 @@ public class Player : MonoBehaviour
         }else if(PlayerPrefs.GetInt("Character") == 2)
         {
             anim.SetInteger("Character", 2);
+        }else if(PlayerPrefs.GetInt("Character") == 3)
+        {
+            anim.SetInteger("Character", 3);
         }
     }
 
