@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 2c9e8d9a63bf4d3429461d0fcc719802
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7240488361930444449
+    second: BossesSpritesheet_0
+  - first:
+      213: -7257311313357247180
+    second: BossesSpritesheet_1
+  - first:
+      213: -3705203486777212614
+    second: BossesSpritesheet_2
+  - first:
+      213: -7836538273038953156
+    second: BossesSpritesheet_3
+  - first:
+      213: -585743666070975539
+    second: BossesSpritesheet_4
+  - first:
+      213: -7975151423206444247
+    second: BossesSpritesheet_5
+  - first:
+      213: 8340047708874555221
+    second: BossesSpritesheet_6
+  - first:
+      213: 8799580837961574355
+    second: BossesSpritesheet_7
+  - first:
+      213: -1092393863141631721
+    second: BossesSpritesheet_8
+  - first:
+      213: 5154829642401778564
+    second: BossesSpritesheet_9
+  - first:
+      213: 223777785555690212
+    second: BossesSpritesheet_10
+  - first:
+      213: 1886337556245170289
+    second: BossesSpritesheet_11
+  - first:
+      213: 8403145082595636691
+    second: BossesSpritesheet_12
+  - first:
+      213: -2979552200847483161
+    second: BossesSpritesheet_13
+  - first:
+      213: -7797572032373404458
+    second: BossesSpritesheet_14
+  - first:
+      213: 4701092784762724490
+    second: BossesSpritesheet_15
+  - first:
+      213: -7960483246599143656
+    second: BossesSpritesheet_16
+  - first:
+      213: -8541504432585587694
+    second: BossesSpritesheet_17
+  - first:
+      213: -6458845314057234583
+    second: BossesSpritesheet_18
+  - first:
+      213: 8756013353473023731
+    second: BossesSpritesheet_19
+  - first:
+      213: -186195987772679380
+    second: BossesSpritesheet_20
+  - first:
+      213: 2491190050797703211
+    second: BossesSpritesheet_21
+  - first:
+      213: -6450119317076869172
+    second: BossesSpritesheet_22
+  - first:
+      213: 7363261764362096513
+    second: BossesSpritesheet_23
+  - first:
+      213: 4746330095236999707
+    second: BossesSpritesheet_24
+  - first:
+      213: 6134702417104917721
+    second: BossesSpritesheet_25
+  - first:
+      213: 2496873803416829666
+    second: BossesSpritesheet_26
+  - first:
+      213: -6482730600378574601
+    second: BossesSpritesheet_27
+  - first:
+      213: -8502412126703630194
+    second: BossesSpritesheet_28
+  - first:
+      213: -3101208123117113620
+    second: BossesSpritesheet_29
+  - first:
+      213: 7809702088977203644
+    second: BossesSpritesheet_30
+  - first:
+      213: -6390542389195279835
+    second: BossesSpritesheet_31
+  - first:
+      213: 4384386975260488665
+    second: BossesSpritesheet_32
+  - first:
+      213: 4718505347421557178
+    second: BossesSpritesheet_33
+  - first:
+      213: -619924947108058470
+    second: BossesSpritesheet_34
+  - first:
+      213: -8304754879171706896
+    second: BossesSpritesheet_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossesSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5139c2523e948b90800000000000000
+      internalID: -7240488361930444449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43deae6bfc9d84b90800000000000000
+      internalID: -7257311313357247180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a310b1e4f09749cc0800000000000000
+      internalID: -3705203486777212614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3592ced5f50f3390800000000000000
+      internalID: -7836538273038953156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb87663d350fd7f0800000000000000
+      internalID: -585743666070975539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92334d5e802925190800000000000000
+      internalID: -7975151423206444247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f3749243dcdb370800000000000000
+      internalID: 8340047708874555221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7a80366246e1a70800000000000000
+      internalID: 8799580837961574355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossesSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71950a8b19907d0f0800000000000000
+      internalID: -1092393863141631721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
