@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2531640331451665547}
   - component: {fileID: 1546146736569840313}
   - component: {fileID: 7621437730606632539}
-  - component: {fileID: 6916131919802757674}
   - component: {fileID: 3771722141378849290}
+  - component: {fileID: -9149907353572296014}
   m_Layer: 9
   m_Name: Boss2
   m_TagString: Boss1
@@ -123,7 +123,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 1.9692308, y: 1.9692308}
     newSize: {x: 10.8, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,19 +188,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.11}
   serializedVersion: 2
   m_Radius: 0.24
---- !u!114 &6916131919802757674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510914947693373055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38fe2985b2a5c1a409e20f0be7205d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 510914947693373055}
 --- !u!95 &3771722141378849290
 Animator:
   serializedVersion: 3
@@ -211,7 +198,7 @@ Animator:
   m_GameObject: {fileID: 510914947693373055}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 41396c000a8471f44b60a4937a065bd5, type: 2}
+  m_Controller: {fileID: 9100000, guid: dfed451d7951955438579b81d28d1139, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -220,6 +207,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-9149907353572296014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510914947693373055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba260fde692c99844b98da1c437a0d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 510914947693373055}
 --- !u!1 &2187679959265026430
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.01, y: -0.85}
+  m_AnchoredPosition: {x: -0.01, y: -1.01}
   m_SizeDelta: {x: 0.46890616, y: 0.11082359}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3905519114735772912
