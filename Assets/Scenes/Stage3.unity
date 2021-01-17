@@ -3319,7 +3319,7 @@ MonoBehaviour:
   - {fileID: 1088105795}
   - {fileID: 1088105795}
   - {fileID: 1088105795}
-  boss: {fileID: 924928869532731688, guid: ffaebfcb73f5af94fab0980f1de524ad, type: 3}
+  boss: {fileID: 8815855255093228765, guid: ffc0f4430c52e874eb13de4da8ebdbf7, type: 3}
   Victory: {fileID: 278277206}
   Defeat: {fileID: 242885761}
   waves:

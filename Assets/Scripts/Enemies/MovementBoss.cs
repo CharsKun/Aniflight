@@ -58,8 +58,6 @@ public class MovementBoss : MonoBehaviour
             Instantiate(explodeBoss, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
-        
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
