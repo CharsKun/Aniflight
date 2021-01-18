@@ -99,7 +99,7 @@ public class PlayerBullet : MonoBehaviour
         {
             if (Power == 1)
             {
-                for (int i = 0; i < bulletsAmount + 1; i++)
+                for (int i = 0; i < bulletsAmount + 3; i++)
                 {
                     float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 90f);
 
@@ -107,11 +107,28 @@ public class PlayerBullet : MonoBehaviour
                     Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
                     GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                    bul.transform.localScale = new Vector3(4, 5, 4);
                     Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
                     bul.transform.position = v;
                     bul.transform.rotation = transform.rotation;
                     bul.SetActive(true);
                     bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                    GameObject bul2 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                    bul2.transform.localScale = new Vector3(3, 4, 3);
+                    Vector2 v2 = new Vector2(this.GetComponent<Player>().transform.position.x - 0f, this.GetComponent<Player>().transform.position.y-0.4f);
+                    bul2.transform.position = v2;
+                    bul2.transform.rotation = transform.rotation;
+                    bul2.SetActive(true);
+                    bul2.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                    GameObject bul3 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                    bul3.transform.localScale = new Vector3(3, 4, 3);
+                    Vector2 v3 = new Vector2(this.GetComponent<Player>().transform.position.x - 0.6f, this.GetComponent<Player>().transform.position.y-0.4f);
+                    bul3.transform.position = v3;
+                    bul3.transform.rotation = transform.rotation;
+                    bul3.SetActive(true);
+                    bul3.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
 
                     angle += angleStep;
                 }
@@ -120,19 +137,52 @@ public class PlayerBullet : MonoBehaviour
             {
                 if (currentTime > 0f)
                 {
-                    for (int i = 0; i < bulletsAmount + 1; i++)
+                    for (int i = 0; i < bulletsAmount + 3; i++)
                     {
-                        float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+                        float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 90f);
 
                         Vector3 bulMoveVector = new Vector3(bulDirX, 0f);
                         Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
                         GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul.transform.localScale = new Vector3(4, 5, 4);
                         Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
                         bul.transform.position = v;
                         bul.transform.rotation = transform.rotation;
                         bul.SetActive(true);
                         bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                        GameObject bul2 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul2.transform.localScale = new Vector3(3, 4, 3);
+                        Vector2 v2 = new Vector2(this.GetComponent<Player>().transform.position.x - 0f, this.GetComponent<Player>().transform.position.y-0.3f);
+                        bul2.transform.position = v2;
+                        bul2.transform.rotation = transform.rotation;
+                        bul2.SetActive(true);
+                        bul2.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                        GameObject bul3 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul3.transform.localScale = new Vector3(3, 4, 3);
+                        Vector2 v3 = new Vector2(this.GetComponent<Player>().transform.position.x - 0.6f, this.GetComponent<Player>().transform.position.y-0.3f);
+                        bul3.transform.position = v3;
+                        bul3.transform.rotation = transform.rotation;
+                        bul3.SetActive(true);
+                        bul3.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                        GameObject bul4 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul4.transform.localScale = new Vector3(3, 4, 3);
+                        Vector2 v4 = new Vector2(this.GetComponent<Player>().transform.position.x - 0.1f, this.GetComponent<Player>().transform.position.y+0.5f);
+                        bul4.transform.position = v4;
+                        bul4.transform.rotation = transform.rotation;
+                        bul4.SetActive(true);
+                        bul4.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+
+                        GameObject bul5 = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul5.transform.localScale = new Vector3(3, 4, 3);
+                        Vector2 v5 = new Vector2(this.GetComponent<Player>().transform.position.x - 0.5f, this.GetComponent<Player>().transform.position.y+0.5f);
+                        bul5.transform.position = v5;
+                        bul5.transform.rotation = transform.rotation;
+                        bul5.SetActive(true);
+                        bul5.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
 
                         angle += angleStep;
                     }

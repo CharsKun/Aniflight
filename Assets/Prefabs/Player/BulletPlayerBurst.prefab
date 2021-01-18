@@ -99,7 +99,7 @@ MonoBehaviour:
   moveSpeed: 9
   Player: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257, type: 3}
   Projectile1: {fileID: 21300000, guid: cb79d3fcc9debc347a3b7e8848edb2fe, type: 3}
-  Projectile2: {fileID: 21300000, guid: 3e45471a6e90d9f4da378d31457df05d, type: 3}
+  Projectile2: {fileID: 21300000, guid: b3cf71906cb093c44ab5df7beca67767, type: 3}
   Projectile3: {fileID: 21300000, guid: 1980fbe79256a4f4fa55ff0226b95544, type: 3}
   currentTime: 0
 --- !u!60 &7871029452616364398

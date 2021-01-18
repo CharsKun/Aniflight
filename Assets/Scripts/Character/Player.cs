@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
             isShield = true;
         }
 
-        if(currentHealth <= 0 && Victory==false)
+        if(currentHealth <= 0 && !Victory.activeInHierarchy)
         {
             ManaFull.Clear();
             ManaFull.Pause();
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour
                 }
                 else if (PlayerPrefs.GetInt("Character") == 2)
                 {
-                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.6f);
                 }
                 else
                 {
