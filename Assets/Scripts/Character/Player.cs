@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private float timeTakeDamage;
     private bool canTakeDamage;
 
-    private bool isRage = true;
+    public bool isRage = true;
     // public Sprite backForm;
     // public Sprite Form;
     Animator anim;
@@ -29,13 +29,16 @@ public class Player : MonoBehaviour
     public Animator ShakeEffect;
     public GameObject Defeat;
     public GameObject Victory;
+    public GameObject stage;
 
     private float shieldTime;
     private float currentTime = 0f;
     private float startTime = 7f;
     //public float currentUltiTime = 0f;
     //private float UltiTime = 1f;
-    
+
+    private float timeBeforeStart = 0f;
+
 
     void InputProses()
     {
@@ -81,6 +84,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //SetActiveStageContoller (Mulai Spawn Minion)
+        timeBeforeStart += Time.deltaTime;
+        if (timeBeforeStart>=3)
+        {
+            stage.SetActive(true);
+        }
+
+
         isHit = false;
         InputProses();
         changeForm();
@@ -170,7 +181,6 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Form")&&isRage==false && currentMana>=20)
         {
-            //Debug.Log("Form Actived");
             currentTime = startTime;
             currentMana = 0;
             ManaFull.Pause();
@@ -184,17 +194,38 @@ public class Player : MonoBehaviour
             //this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
             if(isRage == false)
             {
-                this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
-               // BulletP.GetComponent<SpriteRenderer>().color = new Color(0, 0, 244);
+                if (PlayerPrefs.GetInt("Character") == 1)
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.15f);
+                }
+                else if (PlayerPrefs.GetInt("Character") == 2)
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                }
+                else
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                }
+                // BulletP.GetComponent<SpriteRenderer>().color = new Color(0, 0, 244);
                 isRage = true;
             }
         }
         else if(currentTime <= 0f)
         {
             //this.gameObject.GetComponent<SpriteRenderer>().sprite = backForm;
-            if(isRage == true)
+            if(isRage == true )
             {
-                this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                if (PlayerPrefs.GetInt("Character") == 1)
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                }else if(PlayerPrefs.GetInt("Character") == 2)
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                }
+                else
+                {
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                }
                 //BulletP.GetComponent<SpriteRenderer>().color = new Color(254, 244, 0);
 
                 isRage = false;
@@ -209,37 +240,8 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("isRage", true);
         }
-
-        //Ulti
-        /*if(Input.GetButtonDown("Form") && isRage == true && anim.GetBool("isUlti")==false && currentTime > 0f && currentTime <3f)
-        {
-
-            Debug.Log("Ulti");
-
-            
-            currentUltiTime = 2f;
-        }*/
-
-        /*if (currentUltiTime > 0f)
-        {
-            anim.SetBool("isUlti", true);
-        }
-        else if(anim.GetBool("isUlti")==true && currentUltiTime <=0f)
-        {
-            anim.SetBool("isUlti", false);
-            currentTime = 0f;
-            
-        }*/
-
-        //Debug.Log(currentTime);
     }
-
-    private void ultimate()
-    {
-        
-
-    }
-
+ 
     private void EffectParticle()
     {
         

@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8538135375285016750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18, y: -14.27, z: 0}
-  m_LocalScale: {x: 1.2865268, y: 1.2865268, z: 1.2865268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1.882353, y: 1.882353}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8538135375285016739
@@ -125,8 +125,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.882353, y: 1.882353}
-    newSize: {x: 1.882353, y: 1.882353}
+    oldSize: {x: 3.047619, y: 3.047619}
+    newSize: {x: 3.047619, y: 3.047619}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   ManaFull: {fileID: 0}
+  isRage: 1
   ShakeEffect: {fileID: 0}
   Defeat: {fileID: 0}
   Victory: {fileID: 0}
@@ -189,7 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsAmount: 1
   startAngle: 90
-  fireSpeed: 0
 --- !u!95 &-6470800601142533585
 Animator:
   serializedVersion: 3

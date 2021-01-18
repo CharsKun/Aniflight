@@ -39,6 +39,9 @@ public class StageController : MonoBehaviour
     public int WaveIndex { get; private set; }
     private float currentWaveTime;
 
+    private float ItsTime=0f;
+    private float ZaTime=3f;
+
     private float respawnTime = 1f;  
     private int count = 0 ;
     private float time;
@@ -158,13 +161,17 @@ public class StageController : MonoBehaviour
                     
                 }*/
 
-                if (bossSpawned == false)
+                if (bossSpawned == false && ItsTime >= ZaTime)
                 {
                     a = Instantiate(boss) as GameObject;
                     a.transform.position = new Vector2(-0.02423012f, -1.798349f);
                     bossSpawned = true;
                 }
-                else
+                else if (bossSpawned == false && ItsTime < ZaTime)
+                {
+                    ItsTime += Time.deltaTime;
+                }
+                else 
                 {
                     if (!hehe)
                     {
