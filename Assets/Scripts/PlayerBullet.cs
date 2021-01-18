@@ -43,6 +43,7 @@ public class PlayerBullet : MonoBehaviour
     {
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = startAngle;
+        //SKILL BURST KNIGHT
         if (GetComponent<Player>().isRage == true && PlayerPrefs.GetInt("Character")==1)
         {
             
@@ -93,6 +94,7 @@ public class PlayerBullet : MonoBehaviour
                 }
             }
         }
+        //SKILL BURST ARCHER
         else if (GetComponent<Player>().isRage == true && PlayerPrefs.GetInt("Character") == 2)
         {
             if (Power == 1)
@@ -141,11 +143,12 @@ public class PlayerBullet : MonoBehaviour
                 }
             }
         }
+        //SKILL BURST MAGE
         else if (GetComponent<Player>().isRage == true && PlayerPrefs.GetInt("Character") == 3)
         {
             if (Power == 1)
             {
-                for (int i = 0; i < bulletsAmount + 1; i++)
+                /*for (int i = 0; i < bulletsAmount + 1; i++)
                 {
                     float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 90f);
 
@@ -160,32 +163,41 @@ public class PlayerBullet : MonoBehaviour
                     bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
 
                     angle += angleStep;
-                }
+                }*/
+
+                float bulDirX = transform.position.x + Mathf.Sin((Random.Range(345f, 375f) * Mathf.PI) / 180f);
+                float bulDirY = transform.position.y + Mathf.Cos((Random.Range(345f, 375f) * Mathf.PI) / 180f);
+
+                Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+                Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+
+                GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                bul.transform.position = transform.position;
+                bul.transform.rotation = transform.rotation;
+                bul.SetActive(true);
+                bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
             }
             else if (Power == 2)
             {
+                changeSpeed(0.08f);
                 if (currentTime > 0f)
                 {
-                    for (int i = 0; i < bulletsAmount + 1; i++)
-                    {
-                        float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+                    float bulDirX = transform.position.x + Mathf.Sin((Random.Range(345f, 375f) * Mathf.PI) / 180f);
+                    float bulDirY = transform.position.y + Mathf.Cos((Random.Range(345f, 375f) * Mathf.PI) / 180f);
 
-                        Vector3 bulMoveVector = new Vector3(bulDirX, 0f);
-                        Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+                    Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+                    Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-                        GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
-                        Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
-                        bul.transform.position = v;
-                        bul.transform.rotation = transform.rotation;
-                        bul.SetActive(true);
-                        bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
-
-                        angle += angleStep;
-                    }
+                    GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                    bul.transform.position = transform.position;
+                    bul.transform.rotation = transform.rotation;
+                    bul.SetActive(true);
+                    bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
                 }
                 else if (currentTime <= 0f)
                 {
                     Power = 1;
+                    changeSpeed(0.1f);
                 }
             }
         }
@@ -234,6 +246,7 @@ public class PlayerBullet : MonoBehaviour
                 else if (currentTime <= 0f)
                 {
                     Power = 1;
+                    changeSpeed(0.2f);
                 }
             }
         }

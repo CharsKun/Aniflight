@@ -2199,7 +2199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1329001804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2268,15 +2268,15 @@ MonoBehaviour:
       amount: 9
       interval: 0.3
       waypointIndex: 2
-    time: 15
+    time: 30
   - spawns:
     - minion: {fileID: 3693792020941821238, guid: 60137e79a66b922419ad57650831eb90,
         type: 3}
-      delay: 3
+      delay: 0.5
       amount: 1
-      interval: 1
+      interval: 0.5
       waypointIndex: 0
-    time: 10
+    time: 5
 --- !u!4 &1329001805
 Transform:
   m_ObjectHideFlags: 0
@@ -3938,6 +3938,11 @@ PrefabInstance:
       propertyPath: Victory
       value: 
       objectReference: {fileID: 1062603469}
+    - target: {fileID: 8538135375285016737, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 1329001803}
     - target: {fileID: 8538135375285016738, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -4147,8 +4152,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6888708756529517008, guid: 6831a726fcd07f441b2ec40903e792f8,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_Color.r
@@ -4172,7 +4176,7 @@ PrefabInstance:
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}

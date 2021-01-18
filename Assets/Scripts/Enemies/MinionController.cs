@@ -117,6 +117,11 @@ public class MinionController : MonoBehaviour
             //Debug.Log("Health : "+ Health);
             rend.material.color = Color.red;
             redTime = 0.05f;
+        }else if(collision.tag == "BulletPlayerBurst")
+        {
+            Health -= 2;
+            rend.material.color = Color.red;
+            redTime = 0.05f;
         }
     }
 }

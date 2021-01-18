@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
             isShield = true;
         }
 
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && Victory==false)
         {
             ManaFull.Clear();
             ManaFull.Pause();
@@ -139,8 +139,9 @@ public class Player : MonoBehaviour
             Victory.SetActive(false);
             Destroy(healthBar.gameObject);
             Destroy(manaBar.gameObject);
-            
+
         }
+        
 
         if(currentHealth > 5)
         {
@@ -191,7 +192,6 @@ public class Player : MonoBehaviour
 
         if (currentTime > 0f)
         {
-            //this.gameObject.GetComponent<SpriteRenderer>().sprite = Form;
             if(isRage == false)
             {
                 if (PlayerPrefs.GetInt("Character") == 1)
@@ -204,9 +204,8 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    this.GetComponent<PlayerBullet>().changeSpeed(0.2f);
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
                 }
-                // BulletP.GetComponent<SpriteRenderer>().color = new Color(0, 0, 244);
                 isRage = true;
             }
         }

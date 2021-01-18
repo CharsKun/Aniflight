@@ -14,6 +14,7 @@ public class Bullet_PBurst : MonoBehaviour
     //public bool validation;
 
     public float currentTime;
+    
     private void OnEnable()
     {
         Invoke("Destroy", 1.7f);
@@ -42,6 +43,7 @@ public class Bullet_PBurst : MonoBehaviour
     void Update()
     {
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        
     }
 
     public void SetMoveDirection(Vector2 dir)

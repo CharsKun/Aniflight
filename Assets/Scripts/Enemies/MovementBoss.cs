@@ -70,5 +70,12 @@ public class MovementBoss : MonoBehaviour
             healthBar.setHealth(Health);
             //Debug.Log("Health : "+ Health);
         }
+        else if(collision.tag == "BulletPlayerBurst")
+        {
+            Health -= 2;
+            rend.material.color = Color.red;
+            redTime = 0.05f;
+            healthBar.setHealth(Health);
+        }
     }
 }
