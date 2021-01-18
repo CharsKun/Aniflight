@@ -1065,6 +1065,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &697295714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697295716}
+  - component: {fileID: 697295715}
+  m_Layer: 0
+  m_Name: BulletPolling_PlayerBurst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &697295715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697295714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dad3a0a9fd2e534db5cfff037b2dab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledBullet: {fileID: 8793904698732288488, guid: 45345b8ebe55c7a46addafc18dfd9d54,
+    type: 3}
+--- !u!4 &697295716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697295714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1218336, y: -7.305675, z: -0.8063389}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746054331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2884,7 @@ PrefabInstance:
     - target: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}

@@ -12,6 +12,7 @@ public class PlayerBullet : MonoBehaviour
     private float endAngle = 270f;
     private float startTime = 10f;
     private float currentTime;
+    private float timeShoot;
 
     private int Power = 1;
 
@@ -19,17 +20,29 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         
-        InvokeRepeating("Fire", 0f, 2f);
+        if(timeShoot <= 3f)
+        {
+            CancelInvoke();
+        }
+        else
+        {
+            InvokeRepeating("Fire", 0f, 2f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-
+        timeShoot += 1 * Time.deltaTime;
         if(currentTime <= 0f)
         {
             currentTime = 0f;
+        }
+
+        if(timeShoot >= 3f)
+        {
+            timeShoot = 3f;
         }
     }
 
