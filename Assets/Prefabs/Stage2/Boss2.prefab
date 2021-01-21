@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7621437730606632539}
   - component: {fileID: 3771722141378849290}
   - component: {fileID: -9149907353572296014}
+  - component: {fileID: 3652865732558256469}
+  - component: {fileID: -4189000657113559363}
   m_Layer: 9
   m_Name: Boss2
   m_TagString: Boss1
@@ -123,7 +125,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9692308, y: 1.9692308}
+    oldSize: {x: 1.7066667, y: 1.7066667}
     newSize: {x: 10.8, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -220,6 +222,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boss: {fileID: 510914947693373055}
+--- !u!114 &3652865732558256469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510914947693373055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487e37b12d61aa740855eac6f471c0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4189000657113559363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510914947693373055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d986d398bbc12624d8ce633db0af98a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodeBoss: {fileID: 1718962827969441692, guid: 7250dc6a0ef849847ae1b522847dcc85,
+    type: 3}
+  maxHealth: 400
+  Health: 400
+  healthBar: {fileID: 431116258139156606}
 --- !u!1 &2187679959265026430
 GameObject:
   m_ObjectHideFlags: 0
