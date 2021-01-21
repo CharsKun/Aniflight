@@ -196,15 +196,15 @@ public class Player : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt("Character") == 1)
                 {
-                    this.GetComponent<PlayerBullet>().changeSpeed(0.15f);
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
                 }
                 else if (PlayerPrefs.GetInt("Character") == 2)
                 {
-                    this.GetComponent<PlayerBullet>().changeSpeed(0.6f);
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.8f);
                 }
                 else
                 {
-                    this.GetComponent<PlayerBullet>().changeSpeed(0.1f);
+                    this.GetComponent<PlayerBullet>().changeSpeed(0.05f);
                 }
                 isRage = true;
             }

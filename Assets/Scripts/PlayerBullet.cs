@@ -92,6 +92,7 @@ public class PlayerBullet : MonoBehaviour
                         Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
                         GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul.transform.localScale = new Vector3(9, 9, 9);
                         Vector2 v = new Vector2(this.GetComponent<Player>().transform.position.x - 0.3f, this.GetComponent<Player>().transform.position.y);
                         bul.transform.position = v;
                         bul.transform.rotation = transform.rotation;
@@ -242,25 +243,28 @@ public class PlayerBullet : MonoBehaviour
             }
             else if (Power == 2)
             {
-                changeSpeed(0.08f);
+                //changeSpeed(0.1f);
                 if (currentTime > 0f)
                 {
-                    float bulDirX = transform.position.x + Mathf.Sin((Random.Range(345f, 375f) * Mathf.PI) / 180f);
-                    float bulDirY = transform.position.y + Mathf.Cos((Random.Range(345f, 375f) * Mathf.PI) / 180f);
+                    for (int i = 0; i < bulletsAmount + 1; i++)
+                    {
+                        float bulDirX = transform.position.x + Mathf.Sin((Random.Range(345f, 375f) * Mathf.PI) / 180f);
+                        float bulDirY = transform.position.y + Mathf.Cos((Random.Range(345f, 375f) * Mathf.PI) / 180f);
 
-                    Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-                    Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+                        Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+                        Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-                    GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
-                    bul.transform.position = transform.position;
-                    bul.transform.rotation = transform.rotation;
-                    bul.SetActive(true);
-                    bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+                        GameObject bul = BulletPool_PBurst.bulletPoolInstanse.GetBullet();
+                        bul.transform.position = transform.position;
+                        bul.transform.rotation = transform.rotation;
+                        bul.SetActive(true);
+                        bul.GetComponent<Bullet_PBurst>().SetMoveDirection(bulDir);
+                    }
                 }
                 else if (currentTime <= 0f)
                 {
                     Power = 1;
-                    changeSpeed(0.1f);
+                    //changeSpeed(0.03f);
                 }
             }
         }
