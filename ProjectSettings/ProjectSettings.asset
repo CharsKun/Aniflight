@@ -46,8 +46,8 @@ PlayerSettings:
     duration: 3
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 360
-  defaultScreenHeight: 640
+  defaultScreenWidth: 600
+  defaultScreenHeight: 960
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
@@ -127,8 +127,8 @@ PlayerSettings:
     5:4: 0
     16:10: 0
     16:9: 1
-    Others: 0
-  bundleVersion: 0.1
+    Others: 1
+  bundleVersion: 0.8
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

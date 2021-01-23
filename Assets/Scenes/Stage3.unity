@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea300f9b7d77d34aab2ec45f1e8b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledBullet: {fileID: 3130344094172775031, guid: d48032c836f525b4886b92d12cbbddb2,
+  pooledBullet: {fileID: 5660110826339190344, guid: 8f82b9971f7ec444b92a3587623807c0,
     type: 3}
 --- !u!4 &994159986
 Transform:
