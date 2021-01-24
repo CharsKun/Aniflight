@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public GameObject Defeat;
     public GameObject Victory;
     public GameObject stage;
+    public GameObject PauseButton;
 
     private float shieldTime;
     private float currentTime = 0f;
@@ -137,6 +138,7 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
             Defeat.SetActive(true);
             Victory.SetActive(false);
+            PauseButton.SetActive(false);
             Destroy(healthBar.gameObject);
             Destroy(manaBar.gameObject);
 
@@ -180,7 +182,7 @@ public class Player : MonoBehaviour
     private void changeForm()
     {
         
-        if (Input.GetButtonDown("Form")&&isRage==false && currentMana>=20)
+        if (Input.GetButtonDown("Form") && isRage==false && currentMana>=20)
         {
             currentTime = startTime;
             currentMana = 0;

@@ -1124,6 +1124,9 @@ MonoBehaviour:
   boss: {fileID: 9084403274787124691, guid: 648590d9d7c68074fbaea0719e860b4d, type: 3}
   Victory: {fileID: 93819231}
   Defeat: {fileID: 245665821}
+  hb: {fileID: 1652339980}
+  mb: {fileID: 928138757}
+  PauseButton: {fileID: 1669484158}
   waves:
   - spawns:
     - minion: {fileID: 973502658685308867, guid: 8e3e0593596168f4fa802b76d955608f,
@@ -1947,6 +1950,11 @@ PrefabInstance:
       propertyPath: stage
       value: 
       objectReference: {fileID: 700395328}
+    - target: {fileID: 8538135375285016737, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: PauseButton
+      value: 
+      objectReference: {fileID: 1669484158}
     - target: {fileID: 8538135375285016738, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

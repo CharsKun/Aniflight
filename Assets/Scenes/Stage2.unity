@@ -1898,6 +1898,11 @@ PrefabInstance:
       propertyPath: stage
       value: 
       objectReference: {fileID: 1746635382}
+    - target: {fileID: 8538135375285016737, guid: 462a1dce4f165df4ca2ff51eaf473257,
+        type: 3}
+      propertyPath: PauseButton
+      value: 
+      objectReference: {fileID: 1737138773}
     - target: {fileID: 8538135375285016738, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -2131,6 +2136,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 462a1dce4f165df4ca2ff51eaf473257, type: 3}
+--- !u!1 &757882706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257,
+    type: 3}
+  m_PrefabInstance: {fileID: 757882705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &757882707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757882706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67a9e651d4d9914f82f6e65559e6dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &835784137
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,6 +8582,9 @@ MonoBehaviour:
   boss: {fileID: 510914947693373055, guid: b5453157366ac4e4c8335ff37b653c3b, type: 3}
   Victory: {fileID: 1053664872}
   Defeat: {fileID: 25777105}
+  hb: {fileID: 507227693}
+  mb: {fileID: 68070406}
+  PauseButton: {fileID: 1737138773}
   waves:
   - spawns:
     - minion: {fileID: 4106456095085573293, guid: 91566ca464e2d4a4f92ecb5731bbf860,

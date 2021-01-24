@@ -18,6 +18,8 @@ public class StageController : MonoBehaviour
     private GameObject a;
     public GameObject Victory;
     public GameObject Defeat;
+    public GameObject hb,mb;
+    public GameObject PauseButton;
 
     [Serializable]
     public struct MinionSpawnData
@@ -179,7 +181,10 @@ public class StageController : MonoBehaviour
                         {
                             Defeat.SetActive(false);
                             Victory.SetActive(true);
+                            PauseButton.SetActive(false);
                             hehe = true;
+                            Destroy(hb.gameObject);
+                            Destroy(mb.gameObject);
                         }
                     }
                 }
