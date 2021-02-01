@@ -479,7 +479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272777835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 6, z: 0}
+  m_LocalPosition: {x: 3, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -1317,7 +1317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660408472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 15, z: 0}
+  m_LocalPosition: {x: 6, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -1717,7 +1717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671111305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 11, z: 0}
+  m_LocalPosition: {x: 8, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -1747,7 +1747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689009355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -17, z: 1}
+  m_LocalPosition: {x: -4, y: -5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 272777836}
@@ -1865,7 +1865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707940576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -4, z: 0}
+  m_LocalPosition: {x: -1, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1776601606}
@@ -2135,7 +2135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920016179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 12, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -2165,7 +2165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974277645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 6, z: 0}
+  m_LocalPosition: {x: 1, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -7383,7 +7383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057183815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -4, z: 0}
+  m_LocalPosition: {x: -4, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1776601606}
@@ -7516,7 +7516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088105794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -2, z: 1}
+  m_LocalPosition: {x: -4, y: -2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1530742382}
@@ -7650,7 +7650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102377349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 2, z: 0}
+  m_LocalPosition: {x: 9, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -8068,7 +8068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288218716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 8, z: 0}
+  m_LocalPosition: {x: 8, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689009356}
@@ -8318,8 +8318,8 @@ MonoBehaviour:
   waypointGroups:
   - {fileID: 309217697}
   - {fileID: 1088105795}
-  - {fileID: 1088105795}
-  - {fileID: 1088105795}
+  - {fileID: 1776601606}
+  - {fileID: 689009356}
   boss: {fileID: 8815855255093228765, guid: ffc0f4430c52e874eb13de4da8ebdbf7, type: 3}
   Victory: {fileID: 278277206}
   Defeat: {fileID: 242885761}
@@ -8347,25 +8347,25 @@ MonoBehaviour:
     - minion: {fileID: 1383675856185227188, guid: a68395c82f00321448c8f422b2821972,
         type: 3}
       delay: 0.5
-      amount: 2
+      amount: 3
       interval: 0.5
       waypointIndex: 3
     time: 10
   - spawns:
     - minion: {fileID: 514411064620795435, guid: 898700d1efee63b47bc4bfb328f7fe77,
         type: 3}
-      delay: 0.7
+      delay: 0.4
       amount: 8
-      interval: 0.7
+      interval: 0.4
       waypointIndex: 2
     time: 10
   - spawns:
     - minion: {fileID: 1383675856185227188, guid: a68395c82f00321448c8f422b2821972,
         type: 3}
       delay: 0.8
-      amount: 3
+      amount: 5
       interval: 0.8
-      waypointIndex: 1
+      waypointIndex: 3
     time: 10
   - spawns:
     - minion: {fileID: 514411064620795435, guid: 898700d1efee63b47bc4bfb328f7fe77,
@@ -8376,12 +8376,20 @@ MonoBehaviour:
       waypointIndex: 2
     time: 10
   - spawns:
+    - minion: {fileID: 514411064620795435, guid: 898700d1efee63b47bc4bfb328f7fe77,
+        type: 3}
+      delay: 0.4
+      amount: 7
+      interval: 0.4
+      waypointIndex: 0
+    time: 10
+  - spawns:
     - minion: {fileID: 1383675856185227188, guid: a68395c82f00321448c8f422b2821972,
         type: 3}
-      delay: 1
-      amount: 1
-      interval: 1
-      waypointIndex: 0
+      delay: 0.6
+      amount: 4
+      interval: 0.6
+      waypointIndex: 3
     time: 10
   - spawns:
     - minion: {fileID: 3693792020941821238, guid: 60137e79a66b922419ad57650831eb90,
@@ -9083,7 +9091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776601605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -2, z: 1}
+  m_LocalPosition: {x: 4, y: -2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 984732843}

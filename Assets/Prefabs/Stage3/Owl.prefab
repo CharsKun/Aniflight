@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: 0
-  atkSpeed: 6
+  atkSpeed: 7
   multiple: 1
   bulletCount: 5
   startAngle: 160
@@ -112,12 +112,12 @@ PrefabInstance:
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: Health
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8776232482800206986, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}

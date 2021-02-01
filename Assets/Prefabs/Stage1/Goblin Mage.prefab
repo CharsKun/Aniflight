@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: atkSpeed
-      value: 7.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: Health
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}

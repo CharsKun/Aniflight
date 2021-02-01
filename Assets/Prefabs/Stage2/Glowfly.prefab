@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: 1
-  atkSpeed: 6
+  atkSpeed: 9.5
   multiple: 0
   bulletCount: 5
   startAngle: 120
   endAngle: 240
   rapidFire: 1
-  bulletWave: 4
+  bulletWave: 2
   waitTime: 0
 --- !u!1001 &3854944449268693870
 PrefabInstance:

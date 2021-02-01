@@ -18,7 +18,7 @@ public class MinionBullet : MonoBehaviour
     public float waitTime;
 
     private float rapidTime;   
-    private bool rapidOn;
+    private bool rapidOn = true;
 
     void Start()
     {

@@ -15,7 +15,7 @@ MonoBehaviour:
   targetPlayer: 0
   atkSpeed: 5
   multiple: 1
-  bulletCount: 5
+  bulletCount: 6
   startAngle: 160
   endAngle: 200
   rapidFire: 0
@@ -108,6 +108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CorruptShroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128845902040200921, guid: 8e3e0593596168f4fa802b76d955608f,
+        type: 3}
+      propertyPath: Health
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8776232482800206986, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}

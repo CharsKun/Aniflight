@@ -13553,7 +13553,7 @@ MonoBehaviour:
         type: 3}
       delay: 0.5
       amount: 10
-      interval: 1
+      interval: 0.5
       waypointIndex: 3
     time: 10
   - spawns:
@@ -13561,7 +13561,7 @@ MonoBehaviour:
         type: 3}
       delay: 0.5
       amount: 5
-      interval: 2
+      interval: 1
       waypointIndex: 2
     time: 10
   - spawns:
