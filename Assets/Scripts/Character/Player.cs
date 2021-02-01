@@ -17,9 +17,11 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public ManaBar manaBar;
     public ParticleSystem ManaFull;
+    public GameObject SkillBtn;
 
     private float timeTakeDamage;
     private bool canTakeDamage;
+    private bool isSkill;
 
     public bool isRage = true;
     // public Sprite backForm;
@@ -155,10 +157,12 @@ public class Player : MonoBehaviour
             currentMana += 1 * Time.deltaTime;
 
             manaBar.setMana(currentMana);
+            isSkill = false;
         }
 
         if (currentMana >= 20f)
         {
+            SkillBtn.SetActive(true);
             ManaFull.Play();
         }
 
@@ -166,7 +170,6 @@ public class Player : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,.5f);
         }
-
     }
 
     void FixedUpdate()
@@ -182,7 +185,7 @@ public class Player : MonoBehaviour
     private void changeForm()
     {
         
-        if (Input.GetButtonDown("Form") && isRage==false && currentMana>=20)
+        if (Input.GetButtonDown("Form") && isRage==false && currentMana>=20 || isSkill && isRage == false && currentMana >= 20)
         {
             currentTime = startTime;
             currentMana = 0;
@@ -294,5 +297,11 @@ public class Player : MonoBehaviour
             isShield = false;
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 255);
         }
+    }
+
+    public void SkillButton()
+    {
+        isSkill = true;
+        SkillBtn.SetActive(false);
     }
 }
