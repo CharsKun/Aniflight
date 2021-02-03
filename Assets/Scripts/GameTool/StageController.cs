@@ -4,11 +4,15 @@ using UnityEngine;
 using System;
 using UnityEditor;
 using System.Linq;
+using UnityEngine.Advertisements;
 
 public class StageController : MonoBehaviour
 {
     public static StageController current;
     public Transform[] waypointGroups;
+
+    string GooglePlay_Id = "3999049";
+    bool TestRun = true;
 
     private List<List<Vector2>> paths;
     private int pathCount;
@@ -65,7 +69,7 @@ public class StageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Advertisement.Initialize(GooglePlay_Id, TestRun);
         count = 0;
         //StartCoroutine(startWave());
 
@@ -179,6 +183,7 @@ public class StageController : MonoBehaviour
                     {
                         if (a.GetComponent<MovementBoss>().Health <= 0)
                         {
+                            Advertisement.Show();
                             if (a.GetComponent<MovementBoss>().IDboss == 1)
                             {
                                 Debug.Log("Boss1 mampud");
