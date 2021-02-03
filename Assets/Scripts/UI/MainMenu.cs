@@ -60,4 +60,14 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 0f;
         Pause.SetActive(true);
     }
+
+    public void ResetData()
+    {
+        PlayerPrefs.SetInt("Stage2", 0);
+        PlayerPrefs.SetInt("Stage3", 0);
+        PlayerPrefs.SetInt("Stage4", 0);
+        PlayerPrefs.SetInt("Stage5", 0);
+        PlayerPrefs.SetInt("Archer", 0);
+        PlayerPrefs.SetInt("Mage", 0);
+    }
 }

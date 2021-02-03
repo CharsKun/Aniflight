@@ -179,6 +179,29 @@ public class StageController : MonoBehaviour
                     {
                         if (a.GetComponent<MovementBoss>().Health <= 0)
                         {
+                            if (a.GetComponent<MovementBoss>().IDboss == 1)
+                            {
+                                Debug.Log("Boss1 mampud");
+                                PlayerPrefs.SetInt("Stage2", 1);
+                            }
+
+                            if (a.GetComponent<MovementBoss>().IDboss == 2)
+                            {
+                                PlayerPrefs.SetInt("Stage3", 1);
+                                PlayerPrefs.SetInt("Archer", 1);
+                            }
+
+                            if (a.GetComponent<MovementBoss>().IDboss == 3)
+                            {
+                                PlayerPrefs.SetInt("Stage4", 1);
+                                PlayerPrefs.SetInt("Mage", 1);
+                            }
+
+                            if (a.GetComponent<MovementBoss>().IDboss == 4)
+                            {
+                                PlayerPrefs.SetInt("Stage5", 1);
+                            }
+
                             Defeat.SetActive(false);
                             Victory.SetActive(true);
                             PauseButton.SetActive(false);

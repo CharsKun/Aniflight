@@ -34,6 +34,7 @@ public class BulletPattern3 : MonoBehaviour
         {
             timeChange2 = 0f;
         }
+
     }
 
     private void Fire()

@@ -30,6 +30,8 @@ public class BulletPattern : MonoBehaviour
         {
             timeChange = 0;
         }
+
+
     }
 
     private void Fire()

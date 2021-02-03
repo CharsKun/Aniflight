@@ -163,7 +163,7 @@ public class BulletPattern4 : MonoBehaviour
             a9 += 30f;
         }
         //}
-
+        
     }
 
     /*private void Fire2()

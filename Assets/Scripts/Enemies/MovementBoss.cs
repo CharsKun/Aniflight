@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementBoss : MonoBehaviour
 {
     private Renderer rend;
+    public int IDboss;
     private float redTime=0f;
     public GameObject explodeBoss;
     //redTime = waktu berapa lama warna dioverlay merah
