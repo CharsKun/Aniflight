@@ -183,7 +183,6 @@ public class StageController : MonoBehaviour
                     {
                         if (a.GetComponent<MovementBoss>().Health <= 0)
                         {
-                            Advertisement.Show();
                             if (a.GetComponent<MovementBoss>().IDboss == 1)
                             {
                                 Debug.Log("Boss1 mampud");

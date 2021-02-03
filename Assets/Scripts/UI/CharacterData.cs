@@ -9,6 +9,7 @@ public class CharacterData : MonoBehaviour
     public Button ArcherInteract;
     public Image Mage;
     public Button MageInteract;
+    public GameObject ArcherUnlock;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class CharacterData : MonoBehaviour
         {
             Archer.GetComponent<Image>().color = new Color(1, 1, 1);
             ArcherInteract.GetComponent<Button>().interactable = true;
+            ArcherUnlock.SetActive(false);
         }
 
         if(PlayerPrefs.GetInt("Mage") >= 1)
