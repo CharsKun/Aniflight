@@ -2638,6 +2638,9 @@ MonoBehaviour:
   boss: {fileID: 924928869532731688, guid: ffaebfcb73f5af94fab0980f1de524ad, type: 3}
   Victory: {fileID: 1854187795}
   Defeat: {fileID: 392899322}
+  hb: {fileID: 0}
+  mb: {fileID: 0}
+  PauseButton: {fileID: 0}
   waves: []
 --- !u!4 &1783388960
 Transform:
