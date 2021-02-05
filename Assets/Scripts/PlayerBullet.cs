@@ -325,7 +325,7 @@ public class PlayerBullet : MonoBehaviour
         {
             Power = 2;
             currentTime = startTime;
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
         }
     }
 

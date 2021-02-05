@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public GameObject Victory;
     public GameObject stage;
     public GameObject PauseButton;
+    public GameObject SoundManager;
 
     private float shieldTime;
     private float currentTime = 0f;
@@ -191,6 +192,7 @@ public class Player : MonoBehaviour
             currentMana = 0;
             ManaFull.Pause();
             ManaFull.Clear();
+            SoundManager.GetComponent<SoundManager>().manaFull();
         }
 
         BulletP.GetComponent<Bullet_P>().currentTime = currentTime;
@@ -283,12 +285,14 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUpMana"))
         {
             currentMana = 20f;
+            SoundManager.GetComponent<SoundManager>().powerUp();
         }
 
         if (collision.gameObject.CompareTag("PowerUpHealth"))
         {
             currentHealth ++;
             healthBar.setHealth(currentHealth);
+            SoundManager.GetComponent<SoundManager>().powerUp();
         }
 
         if (collision.gameObject.CompareTag("PowerUpShield"))
@@ -296,6 +300,12 @@ public class Player : MonoBehaviour
             shieldTime = 5;
             isShield = false;
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 255);
+            SoundManager.GetComponent<SoundManager>().powerUp();
+        }
+
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            SoundManager.GetComponent<SoundManager>().powerUp();
         }
     }
 

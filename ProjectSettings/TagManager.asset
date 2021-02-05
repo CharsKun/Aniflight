@@ -16,6 +16,7 @@ TagManager:
   - ShakeTag
   - PowerUpShield
   - BulletPlayerBurst
+  - BGM
   layers:
   - Default
   - TransparentFX

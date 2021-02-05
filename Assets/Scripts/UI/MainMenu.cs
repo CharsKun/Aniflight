@@ -7,72 +7,157 @@ using UnityEngine.Advertisements;
 public class MainMenu : MonoBehaviour, IUnityAdsListener
 {
     public GameObject Pause;
+
     string GooglePlayId = "3999049";
-    bool TestRun = true;
     string myPlacementId = "rewardedVideo";
+
+    bool TestRun = true;
+    bool mulai = false;
+
+    public GameObject SoundManager;
+    public GameObject layerOption;
+    public GameObject layerCredit;
+
+    private float delay;
+
+    private int sken=0;
 
     private void Start()
     {
         Advertisement.AddListener(this);
         Advertisement.Initialize(GooglePlayId, TestRun);
+        delay = 0;
     }
+
+    private void Update()
+    {
+        if (mulai == true)
+        {
+            delay += Time.deltaTime;
+        }
+
+        if (delay >= 0.3f && sken ==1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }else if(delay >= 0.3f && sken == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }else if(delay >= 0.3f && sken == 11)
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        else if (delay >= 0.3f && sken == 12)
+        {
+            SceneManager.LoadScene("Stage2");
+        }
+        else if (delay >= 0.3f && sken == 13)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
+        else if (delay >= 0.3f && sken == 14)
+        {
+            SceneManager.LoadScene("Stage4");
+        }
+        else if (delay >= 0.3f && sken == 15)
+        {
+            SceneManager.LoadScene("Stage5");
+        }
+        else if(delay >= 0.3f && sken == 10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+        else if (delay >= 0.3f && sken == 9)
+        {
+            Advertisement.Show();
+            SceneManager.LoadScene(1);
+        }
+        
+
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 1;
     }
 
     public void backtoPreviousButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 2;
     }
 
     public void stage1()
     {
-        SceneManager.LoadScene("Stage1");
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 11;
     }
 
     public void stage2()
     {
-        SceneManager.LoadScene("Stage2");
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 12;
     }
 
     public void stage3()
     {
-        SceneManager.LoadScene("Stage3");
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 13;
     }
 
     public void stage4()
     {
-        SceneManager.LoadScene("Stage4");
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 14;
+    }
+
+    public void stage5()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 15;
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 10;
     }
 
     public void StageSelection()
     {
-        Advertisement.Show();
-        SceneManager.LoadScene(1);
         Time.timeScale = 1f;
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        mulai = true;
+        sken = 9;
     }
 
     public void Resume()
     {
         Time.timeScale = 1f;
         this.gameObject.SetActive(false);
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
     }
 
     public void PauseMenu()
     {
+        SoundManager.GetComponent<SoundManager>().paused();
         Time.timeScale = 0f;
         Pause.SetActive(true);
     }
 
     public void ResetData()
     {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
         PlayerPrefs.SetInt("Stage2", 0);
         PlayerPrefs.SetInt("Stage3", 0);
         PlayerPrefs.SetInt("Stage4", 0);
@@ -128,4 +213,29 @@ public class MainMenu : MonoBehaviour, IUnityAdsListener
         Advertisement.Show(myPlacementId);
         SceneManager.LoadScene("CharacterSelection");
     }
+
+    public void showOption()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        layerOption.SetActive(true);
+    }
+
+    public void hideOption()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        layerOption.SetActive(false);
+    }
+
+    public void showCredit()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        layerCredit.SetActive(true);
+    }
+
+    public void hideCredit()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        layerCredit.SetActive(false);
+    }
+
 }
