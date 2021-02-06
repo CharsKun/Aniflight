@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         boss = Instantiate(Boss1);
-        boss.transform.position = new Vector2(-0.02423012f, -1.798349f);
+        boss.transform.position = new Vector2(0.23f, -3.2f);
         boss.SetActive(false);
 
         count = 0;

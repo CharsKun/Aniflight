@@ -543,6 +543,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause: {fileID: 0}
+  SoundManager: {fileID: 0}
+  layerOption: {fileID: 0}
+  layerCredit: {fileID: 0}
 --- !u!114 &219882801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause: {fileID: 0}
+  SoundManager: {fileID: 0}
+  layerOption: {fileID: 0}
+  layerCredit: {fileID: 0}
 --- !u!223 &816607333
 Canvas:
   m_ObjectHideFlags: 0
@@ -1404,6 +1410,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 592096801}
+  SoundManager: {fileID: 0}
 --- !u!114 &850477375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1776,9 @@ MonoBehaviour:
   boss: {fileID: 924928869532731688, guid: ffaebfcb73f5af94fab0980f1de524ad, type: 3}
   Victory: {fileID: 816607330}
   Defeat: {fileID: 219882795}
+  hb: {fileID: 0}
+  mb: {fileID: 0}
+  PauseButton: {fileID: 0}
   waves: []
 --- !u!4 &1316379484
 Transform:
@@ -1913,6 +1923,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451661308}
   m_CullTransparentMesh: 0
+--- !u!1 &1483754931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257,
+    type: 3}
+  m_PrefabInstance: {fileID: 8538135375361168952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1483754939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483754931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67a9e651d4d9914f82f6e65559e6dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1494140862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,7 +2099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205ee0704f6a99b4aa7b71dd539a198d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledBullet: {fileID: 8152442090917198001, guid: c39ff1409dff46a4ab45a689488c17e1,
+  pooledBullet: {fileID: 2755614048700595406, guid: 96273f74d06cbe74ca5c53a39ab1353a,
     type: 3}
 --- !u!4 &1612647221
 Transform:
@@ -2611,7 +2639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1cbd308cfb9924c96466351d23b1b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss1: {fileID: 9084403274787124691, guid: 648590d9d7c68074fbaea0719e860b4d, type: 3}
+  Boss1: {fileID: 7479308540146751253, guid: 2675aab0ec606b7438ae8d9413b24f7b, type: 3}
   count: 0
   maxCount: 0
   minionPrefab: {fileID: 4079704366788068840, guid: 807bd0b3fb1a0144ba82c6cbe75625d0,
@@ -2987,7 +3015,7 @@ PrefabInstance:
     - target: {fileID: 8538135375285016750, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8538135375285016751, guid: 462a1dce4f165df4ca2ff51eaf473257,
         type: 3}

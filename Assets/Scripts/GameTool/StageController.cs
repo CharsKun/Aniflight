@@ -170,7 +170,14 @@ public class StageController : MonoBehaviour
                 if (bossSpawned == false && ItsTime >= ZaTime)
                 {
                     a = Instantiate(boss) as GameObject;
-                    a.transform.position = new Vector2(-0.02423012f, -1.798349f);
+                    if(a.GetComponent<MovementBoss>().IDboss == 5)
+                    {
+                        a.transform.position = new Vector2(0.23f, -3.2f);
+                    }
+                    else
+                    {
+                        a.transform.position = new Vector2(0.23f, -1.5f);
+                    }
                     bossSpawned = true;
                 }
                 else if (bossSpawned == false && ItsTime < ZaTime)
