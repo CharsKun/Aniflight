@@ -70,7 +70,7 @@ public class MainMenu : MonoBehaviour, IUnityAdsListener
         else if (delay >= 0.3f && sken == 9)
         {
             Advertisement.Show();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("StageSelection");
         }
         
 
