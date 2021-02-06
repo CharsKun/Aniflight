@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause: {fileID: 0}
-  SoundManager: {fileID: 0}
+  SoundManager: {fileID: 1734714452}
   layerOption: {fileID: 0}
   layerCredit: {fileID: 0}
 --- !u!223 &242885764
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause: {fileID: 0}
-  SoundManager: {fileID: 0}
+  SoundManager: {fileID: 1734714452}
   layerOption: {fileID: 0}
   layerCredit: {fileID: 0}
 --- !u!223 &278277209
