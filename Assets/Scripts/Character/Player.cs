@@ -260,6 +260,7 @@ public class Player : MonoBehaviour
             if (canTakeDamage && isShield)
             {
                 ShakeEffect.SetTrigger("shake");
+                SoundManager.GetComponent<SoundManager>().Hitted();
                 currentHealth--;
                 healthBar.setHealth(currentHealth);
                 timeTakeDamage = 0f;
@@ -274,6 +275,7 @@ public class Player : MonoBehaviour
             {
                 ShakeEffect.SetTrigger("shake");
                 currentHealth--;
+                SoundManager.GetComponent<SoundManager>().Hitted();
                 healthBar.setHealth(currentHealth);
                 timeTakeDamage = 0f;
             }

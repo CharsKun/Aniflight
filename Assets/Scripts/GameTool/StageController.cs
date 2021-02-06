@@ -24,6 +24,7 @@ public class StageController : MonoBehaviour
     public GameObject Defeat;
     public GameObject hb,mb;
     public GameObject PauseButton;
+    //public GameObject SoundManager;
 
     [Serializable]
     public struct MinionSpawnData
@@ -130,6 +131,7 @@ public class StageController : MonoBehaviour
                     e.GetComponent<MinionController>().pathIndex = spawnData.waypointIndex;
                     spawnCount++;
                     spawnTimer = 0;
+                    //SoundManager.GetComponent<SoundManager>().Spawned();
                 }
             }
 
