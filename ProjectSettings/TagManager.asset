@@ -17,6 +17,7 @@ TagManager:
   - PowerUpShield
   - BulletPlayerBurst
   - BGM
+  - SM
   layers:
   - Default
   - TransparentFX

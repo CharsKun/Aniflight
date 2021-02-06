@@ -9,6 +9,9 @@ public class SoundManager : MonoBehaviour
     static AudioClip pause;
     static AudioClip manafull;
     static AudioClip powerup;
+    static AudioClip hitted;
+    static AudioClip spawned;
+    static AudioClip bosswarning;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,9 @@ public class SoundManager : MonoBehaviour
         pause = Resources.Load<AudioClip>("Paused");
         manafull = Resources.Load<AudioClip>("ManaFull");
         powerup = Resources.Load<AudioClip>("PowerUp");
+        hitted = Resources.Load<AudioClip>("Hitted");
+        spawned = Resources.Load<AudioClip>("Spawned");
+        bosswarning = Resources.Load<AudioClip>("BossWarning");
         sumberSuara = GetComponent<AudioSource>();
     }
 
@@ -45,6 +51,21 @@ public class SoundManager : MonoBehaviour
     public void powerUp()
     {
         sumberSuara.PlayOneShot(powerup);
+    }
+
+    public void Hitted()
+    {
+        sumberSuara.PlayOneShot(hitted);
+    }
+
+    public void Spawned()
+    {
+        sumberSuara.PlayOneShot(spawned);
+    }
+
+    public void bossWarning()
+    {
+        sumberSuara.PlayOneShot(bosswarning);
     }
 
 }
