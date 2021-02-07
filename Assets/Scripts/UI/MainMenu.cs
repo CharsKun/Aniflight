@@ -238,4 +238,15 @@ public class MainMenu : MonoBehaviour, IUnityAdsListener
         layerCredit.SetActive(false);
     }
 
+    public void unlockAll()
+    {
+        SoundManager.GetComponent<SoundManager>().tombolKlik();
+        PlayerPrefs.SetInt("Stage2", 1);
+        PlayerPrefs.SetInt("Stage3", 1);
+        PlayerPrefs.SetInt("Stage4", 1);
+        PlayerPrefs.SetInt("Stage5", 1);
+        PlayerPrefs.SetInt("Archer", 1);
+        PlayerPrefs.SetInt("Mage", 1);
+    }
+
 }

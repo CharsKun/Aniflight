@@ -928,6 +928,7 @@ MonoBehaviour:
   stage2: {fileID: 1085250523}
   stage3: {fileID: 1825857738}
   stage4: {fileID: 1186949214}
+  stage5: {fileID: 447149802}
 --- !u!1 &1085250521
 GameObject:
   m_ObjectHideFlags: 0
