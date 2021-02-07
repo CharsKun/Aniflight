@@ -7,6 +7,7 @@ public class StageSelectData : MonoBehaviour
     public Button stage2;
     public Button stage3;
     public Button stage4;
+    public Button stage5;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,12 @@ public class StageSelectData : MonoBehaviour
             stage4.GetComponent<Button>().interactable = true;
         }
 
-        Debug.Log(PlayerPrefs.GetInt("Stage2") + " " + PlayerPrefs.GetInt("Stage3") + " " + PlayerPrefs.GetInt("Stage4"));
+        if (PlayerPrefs.GetInt("Stage5") >= 1)
+        {
+            stage5.GetComponent<Button>().interactable = true;
+        }
+
+        //Debug.Log(PlayerPrefs.GetInt("Stage2") + " " + PlayerPrefs.GetInt("Stage3") + " " + PlayerPrefs.GetInt("Stage4"));
     }
 
     // Update is called once per frame
