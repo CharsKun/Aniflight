@@ -15,7 +15,7 @@ public class BulletPattern5 : MonoBehaviour
     private float time1;
     void Start()
     {
-        InvokeRepeating("Fire",0f, 0.1f);
+        InvokeRepeating("Fire",0f, 0.15f);
         InvokeRepeating("Fire2", 0f, 0.02f);
         InvokeRepeating("Fire3", 0f, 1f);
         InvokeRepeating("Fire4", 0f, 0.05f);
@@ -32,14 +32,14 @@ public class BulletPattern5 : MonoBehaviour
 
     private void Fire()
     {
-        float angleStep = (endAngle - startAngle) / 6;
+        float angleStep = (endAngle - startAngle) / 4;
         float angle = startAngle;
 
         if (this.GetComponent<MovementBoss>().Health <= 600 && this.GetComponent<MovementBoss>().Health > 400)
         {
             if(time1 <= 5f)
             {
-                for (int i = 0; i < 6 + 1; i++)
+                for (int i = 0; i < 4 + 1; i++)
                 {
                     float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
                     float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);

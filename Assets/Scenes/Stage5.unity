@@ -790,7 +790,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.29, y: -0.38}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.15
 --- !u!114 &121589931 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8538135375285016737, guid: 462a1dce4f165df4ca2ff51eaf473257,
@@ -7688,7 +7688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1b1d840eb4f9148a5115caab50061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledBullet: {fileID: 6285839482412769588, guid: 0dcd0c8176524324db61c66c5d709552,
+  pooledBullet: {fileID: 1940048869955418035, guid: 2305cf9ce44938a4ba53fa761ee2e31f,
     type: 3}
 --- !u!4 &1385850709
 Transform:
