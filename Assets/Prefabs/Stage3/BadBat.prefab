@@ -18,7 +18,7 @@ MonoBehaviour:
   bulletCount: 5
   startAngle: 160
   endAngle: 200
-  rapidFire: 1
+  rapidFire: 0
   bulletWave: 4
   waitTime: 0
 --- !u!1001 &765925992607173096

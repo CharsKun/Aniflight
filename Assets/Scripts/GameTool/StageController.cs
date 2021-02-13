@@ -24,7 +24,6 @@ public class StageController : MonoBehaviour
     public GameObject Defeat;
     public GameObject hb,mb;
     public GameObject PauseButton;
-    //public GameObject SoundManager;
 
     [Serializable]
     public struct MinionSpawnData
@@ -46,6 +45,7 @@ public class StageController : MonoBehaviour
     public int WaveIndex { get; private set; }
     private float currentWaveTime;
 
+    //Delay Sebelum Wave Dimulai
     private float ItsTime=0f;
     private float ZaTime=3f;
 
@@ -57,6 +57,7 @@ public class StageController : MonoBehaviour
 
     public WaveData[] waves;
 
+    //bool untuk validasi apakah boss sudah dikalahkan atau belum
     private bool hehe=false;
 
     private int spawnCount;
@@ -72,7 +73,6 @@ public class StageController : MonoBehaviour
     {
         Advertisement.Initialize(GooglePlay_Id, TestRun);
         count = 0;
-        //StartCoroutine(startWave());
 
         paths = new List<List<Vector2>>();
 
@@ -131,7 +131,6 @@ public class StageController : MonoBehaviour
                     e.GetComponent<MinionController>().pathIndex = spawnData.waypointIndex;
                     spawnCount++;
                     spawnTimer = 0;
-                    //SoundManager.GetComponent<SoundManager>().Spawned();
                 }
             }
 
@@ -163,11 +162,6 @@ public class StageController : MonoBehaviour
             else
             {
                 WaveProgress = currentWaveTime / spawnEndTime;
-                /*if (WaveProgress > 1f)
-                {
-                    WaveProgress = 1f;
-                    
-                }*/
 
                 if (bossSpawned == false && ItsTime >= ZaTime)
                 {
@@ -194,7 +188,6 @@ public class StageController : MonoBehaviour
                         {
                             if (a.GetComponent<MovementBoss>().IDboss == 1)
                             {
-                                Debug.Log("Boss1 mampud");
                                 PlayerPrefs.SetInt("Stage2", 1);
                             }
 
@@ -224,19 +217,7 @@ public class StageController : MonoBehaviour
                         }
                     }
                 }
-
-
-
-                /*if (currentWaveTime >= spawnEndTime && !hasEnemy)
-                {
-                    WaveIndex++;
-                    currentWaveTime = 0;
-                    spawnCount = 0;
-                }*/
             } 
         }
-
-        
-
     }
 }

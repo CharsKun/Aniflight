@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}
       propertyPath: bulletCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4393580419001870871, guid: 8e3e0593596168f4fa802b76d955608f,
         type: 3}

@@ -15,12 +15,11 @@ MonoBehaviour:
   targetPlayer: 0
   atkSpeed: 7
   multiple: 1
-  bulletCount: 5
+  bulletCount: 4
   startAngle: 160
   endAngle: 200
   rapidFire: 1
   bulletWave: 4
-  waitTime: 0
 --- !u!1001 &2211652652702529655
 PrefabInstance:
   m_ObjectHideFlags: 0

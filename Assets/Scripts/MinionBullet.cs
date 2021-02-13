@@ -6,7 +6,6 @@ public class MinionBullet : MonoBehaviour
 {
 
     // Start is called before the first frame update
-    // Minion minion;
     public bool targetPlayer;
     public float atkSpeed;
     public bool multiple;
@@ -15,24 +14,30 @@ public class MinionBullet : MonoBehaviour
     public float endAngle = 240f;
     public bool rapidFire;
     public int bulletWave = 1;
-    public float waitTime;
+    private float waitTime;
 
     private float rapidTime;   
-    private bool rapidOn = true;
+    private bool rapidOn;
 
     void Start()
     {
-        //if (!minion.enabled)
-        // {
+        
         atkSpeed = 10 - atkSpeed;
 
         if (rapidFire)
         {
+            if (!multiple)
+            {
+                atkSpeed = 0.6f;
+            }
             atkSpeed /= (bulletWave*2);
         }
+        
             InvokeRepeating("Fire", 0f, atkSpeed);
-            
-        //}
+        if (multiple)
+        {
+            bulletCount++ ;
+        }
     }
 
     // Update is called once per frame
@@ -47,7 +52,6 @@ public class MinionBullet : MonoBehaviour
         {
             waitTime += 1f * Time.deltaTime;
             rapidOn = false;
-            //Debug.Log("wait");
         }
         else
         {
@@ -59,8 +63,6 @@ public class MinionBullet : MonoBehaviour
 
     private void Fire()
     {
-        //for (int i = 0; i < bulletsAmount + 1; i++)
-        //{
         if (targetPlayer&&!rapidFire&&!multiple)
         {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); //<Player>();
@@ -167,6 +169,5 @@ public class MinionBullet : MonoBehaviour
             bul.SetActive(true);
             bul.GetComponent<Bullet_M>().SetMoveDirection(bulDir);
         }
-        //}
     }
 }
