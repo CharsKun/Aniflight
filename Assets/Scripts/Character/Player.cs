@@ -262,6 +262,18 @@ public class Player : MonoBehaviour
                 ShakeEffect.SetTrigger("shake");
                 SoundManager.GetComponent<SoundManager>().Hitted();
                 currentHealth--;
+                if (currentMana < 15)
+                {
+                    currentMana += 5;
+                }
+                else if(currentMana >= 20)
+                {
+                    currentMana = 20;
+                }
+                else
+                {
+                    currentMana = 19.9f;
+                }
                 healthBar.setHealth(currentHealth);
                 timeTakeDamage = 0f;
             }
@@ -275,6 +287,18 @@ public class Player : MonoBehaviour
             {
                 ShakeEffect.SetTrigger("shake");
                 currentHealth--;
+                if (currentMana < 15)
+                {
+                    currentMana += 5;
+                }
+                else if (currentMana >= 20)
+                {
+                    currentMana = 20;
+                }
+                else
+                {
+                    currentMana = 19.9f;
+                }
                 SoundManager.GetComponent<SoundManager>().Hitted();
                 healthBar.setHealth(currentHealth);
                 timeTakeDamage = 0f;
