@@ -11,6 +11,8 @@ public class BulletPattern5_2nd : MonoBehaviour
     private float angle2 = 0f, angle3 = 90f, angle4 = 180f, angle5 = 270f;
     private float ang = 0f, ang2 = 0f;
     private float time;
+
+    public GameObject victory;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,10 @@ public class BulletPattern5_2nd : MonoBehaviour
         time += 1 * Time.deltaTime;
 
         if (time >= 10f) time = 0f;
+        if(this.GetComponent<MovementBoss>().Health <= 1)
+        {
+            victory.SetActive(true);
+        }
     }
 
     private void FireSpam()
