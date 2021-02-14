@@ -1564,6 +1564,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4899569476052712929, guid: 2675aab0ec606b7438ae8d9413b24f7b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7049875745235089693, guid: 2675aab0ec606b7438ae8d9413b24f7b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7035,7 +7040,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 9.39, y: 0.57}
+  m_Offset: {x: 9.39, y: -0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
